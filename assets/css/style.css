@@ -1,0 +1,93 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/* Body, Footer, Header styling */
+body{
+    color:white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Poppins', arial, sans-serif;
+    background: url(../images/quiz-background.jpg) no-repeat center / cover;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #2B2D3A;
+    background: translucent;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 60% 80%;
+    border-top-right-radius: 60% 80%;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+
+.show-block {
+    display: block;
+}
+
+.show-inline-flex{
+    display: inline-flex;
+}
+ 
+/* styling classes that have been reused */
+a:link{
+    color: #2688AC;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    
+}
+
+a:hover{
+    color:#ecf74c;
+    background-color: transparent;
+    text-decoration: none; 
+}
+
+div {
+    width: 200px;
+    height: 100px;
+    background: #FFB6C1;
+    transition: background-color 0.25s ease-out 100ms
+  }
+  
+  div:hover {
+    background-color: #FF1493;
+  }
+
+
+.width {
+    width: 100vw;
+}
+
+/* landing and call to action styling */
+#landing{
+    display: inline-flex;
+}
+
+#play-button{
+    font-size: 200px;
+    border-radius: 50%;
+}
+
+#play-button:hover{
+    font-size: 200px;
+    border-radius: 50%;
+}
+
+#question-box{
+
+}
