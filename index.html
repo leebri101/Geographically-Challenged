@@ -4,20 +4,31 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link rel = "icon" href = "assets/images/globe-icon.png" type="image/x-icon" sizes="32x32">
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
         <title>Geography Quiz</title>
 </head>
 <body>
-    <h1 class="heading">
-        <i class="fa-solid fa-earth-europe fa-2xl" style="color: #023992;"></i>Geography Quiz
-    </h1>
+    <header>
+        <h1 class="heading">
+            <i class="fa-solid fa-earth-europe fa-2xl" style="color: #4c8df7;"></i> Geography Quiz
+        </h1>
+        <p>How well are you Geographically placed?</p>
+    </header>
+    <main class="width">
+        <section id = "landing" class="landing">
+            <i class="fa-solid fa-play fa-2xl" style="color: #2688ac;" id="play-button" aria-label = "Press play to start"></i>
+        </section>
+    </main>
     <div class="game-area">
         <div class ="controls-area">
-
+            <button class = "btn btn--big"></button>
+            <button class = "btn btn--big"></button>
+            <button class = "btn btn--big"></button>
+            <button class = "btn btn--big"></button>
+        </div>
+        <div class = "quiz box">
+            <span id = "operand1"></span>
         </div>
 
 
@@ -28,6 +39,14 @@
         <p class="scores">Correct Answers</p> <span id="score">0</span>
         <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
     </div>
+
+    <footer id="footer" class="width" style="display">
+        <p>Follow me for more:</p>
+        <a href="https://github.com/leebri101" target="_blank" rel="noopener"
+            aria-label="Please visit my Github page (opens in new tab)">
+            <i class="fa-brands fa-github fa-2xl"></i>
+        </a>
+    </footer>
 
 
 
