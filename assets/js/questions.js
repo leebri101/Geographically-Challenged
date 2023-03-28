@@ -155,12 +155,12 @@
     },
     {
     questionNum: "15",
-    questionText: "What is the name of China’s largest river?",
+    questionText: "What is the name of China's largest river?",
     choices: [
         "The Yangshe River",
         "The Yangsea River",
         "The Yangtze River",
-        "The Yangze River"
+        "The YangZee River"
         ],
         correctAns: "The Yangtze River"
     },
@@ -169,7 +169,7 @@
     questionText: "What is the tallest moutain the UK?",
     choices: [
         "Carn Eige",
-        "Snowdon - Yr Wyddfa",
+        "Snowdon",
         "Carrauntoohil",
         "Ben Nevis"
         ],
