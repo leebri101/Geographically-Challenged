@@ -1,9 +1,21 @@
 /* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+/* root */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root{
+
+}
+
+
 /* Body, Footer, Header styling */
 body{
-    color:white;
+    color: white;
     top: 0;
     left: 0;
     right: 0;
