@@ -1,108 +1,252 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Geography Quiz**
+## **Site Overview**
 
-Welcome leebri101,
+## Contents-Page:
+1. [**Site Overview**](#site-overview)
+1. [**Project-Planning**](#project-planning)
+    * [**Target Audiences:**](#target-audiences)
+    * [**User Stories**](#user-stories)
+    * [**Site Objectives:**](#site-objectives)
+    * [**How Is This Will Be Achieved:**](#how-will-this-be-achieved)
+    * [**Wireframes**](#wireframes)
+    * [**Color Scheme**](#color-scheme)
+1. [**Current Features on all pages**](#current-features-on-all-pages)
+    * [**Headers:**](#headers)
+        * [*Title*](#title)
+        * [*Logos*](#logos)
+        * [*Navigation tabs*](#navigation-tabs)
+    * [**Hero Images:**](#hero-images)
+      * [**Home-Page**:](#home-page)
+          * [*Hero-Image*](#hero-image)
+      * [**Essentials-Page**:](#essentials-page)
+          * [*Hero-Image*](#hero-image-1)
+    * [**Anchor Tags Within the Pages Contents**](#anchor-tags-within-the-pages-contents)
+    * [**Footer**](#footer)
+    * [**Typsetting**](#typesetting)
+1. [**Individual Page Contents features**](#individual-page-contents-features)
+    * [**Home-Page Contents**](#home-page-contents)
+    * [**Essentials-Page Contents**](#essentials-page-contents)
+    * [**Cardinfo-Page Contents:**](#cardinfo-page-contents)
+    * [**Decks-Page Contents:**](#decks-page-contents)
+    * [**How-to-play-Page Contents:**](#how-to-play-page-contents)
+    * [**Banlist-Page Contents:**](#banlist-page-contents)
+1. [**Potential-Features**](#future-enhancements)
+1. [**Testing Phase**](#testing-phase)
+1. [**Deployment**](#deployment)
+1. [**Credits**](#credits)
+    * [**Honorable mentions**](#honorable-mentions)
+    * [**General reference:**](#general-reference)
+    * [**Content**](#content)
+    * [**Media**](#media)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## **Project Planning**
+### **Target Audiences:**
+<!-- * For users --> 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+### **Site Objectives:**
+* 
 
-## Gitpod Reminders
+### **User Stories:**
+* 
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### **How will this be achieved:**
+<!-- (to change all info) * The home page will allow the user a brief introduction as to what Yu-Gi-Oh is and a navigation point to different parts of the site.
 
-`python3 -m http.server`
+* The site will provbide multiple links and resources such as:
+    * The official website on Yu-Gi-Oh where it will show the latest updates and new decks that will be released by Konami.
+    * Links to an extenseive database/deckbuilder where the user can create tehir ideal deck.
+    * Embedded Youtube Videos showcasing tips and tricks.
 
-A blue button should appear to click: _Make Public_,
+* The site will provide different options on where to be involved with the Yu-Gi-Oh Community.
+    * Through official Konami made apps where users can pit against each other virtually or in person.
+    * Fan-made websites where the user can play virtual decks.
 
-Another blue button should appear to click: _Open Browser_.
+* The site will provide users a link on where to watch the series (providing they have an account linked via Crunchyroll or any affiliated anime streaming sites). -->
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### **WireFrames:**
+<!--
+* To prevent any digression to the from the scope objectives, I have made wireframes for the project. Both the mobile and desktop version will have links to their respected versions of all six pages of the Yugioh guide:
 
-A blue button should appear to click: _Make Public_,
+    * Mobile Wireframes:
+    * [Home-page](doc/wireframes/home-page.png)
+    * [Essentials](doc/wireframes/essentials.png)
+    * [Card Info](doc/wireframes/card-info.png)
+    * [Decks](doc/wireframes/decks.png)
+    * [How To play](doc/wireframes/how-to-play.png)
+    * [Banlist](doc/wireframes/banlist.png)
 
-Another blue button should appear to click: _Open Browser_.
+    * Desktop Wireframes:
+    * [Home-page](doc/wireframes/about-page.png)
+    * [Essentials](doc/wireframes/essentials-page.png)
+    * [Card Info](doc/wireframes/card-info-page.png)
+    * [Decks](doc/wireframes/decks-page.png)
+    * [How To play](doc/wireframes/how-to-play-page.png)
+    * [Banlist](doc/wireframes/banlist-page.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+There was small changes from the planned wireframes to enhancve the UX (User Experience). Changess include:-
 
-To log into the Heroku toolbelt CLI:
+* Links on the homepage which direct teh user to differnt extrnal site e.g Youtube or the offcial Yu-Gi-OH site.
+* Headings and placement of content to allow for a smoother flow and consistency across all pages.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### **Color Scheme:**
+ * When creating the intial overall design of the site I have decided to use this colour scheme to go with the overall Yugioh to make it look more mysterious and within the color scheme of the cards from monster effects, to spells, traps and the newer cards which Konami have introduced, for example; XYZ , Synchro and Link monsters.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+ ![Contrast Grid](doc/screenshots/color-scheme.webp)
 
-------
+## **Current Features on all pages**
+###  **Headers**
+* All Headers have always been stuck to the top left of the pages or the center for mobile. The orginal plan was to use the headers as a way to naviagte back to the home-page but due to time constraints of the project being due very soon, it will be added at a later date a new feature.
 
-## Release History
+* The headers contain all of the features
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+ The header itself contains the following features: 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### *Title:*
+![Title](doc/screenshots/title.webp)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+* The title is there to indicate the purpose of each page.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#### *Logos:*
+* The logos illustrate the site's theme and offer something to appease the user's eye by filling the blank space without distracting from the title.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+    * The logo on mobile version is to make sure that the title is enalarged on a smaller screen for a better user experience. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+        ![Mobile Logo](doc/screenshots/mobile-logo.webp)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+    * Whereas the logo on the desktop version is to fill as much white space as possible on a higher screen resolution for a much cleaner appearence. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+        ![Desktop Logo](doc/screenshots/logo.webp)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+#### *Navigation tabs:*
+* all of the navigation tabs appear on all 6 pages of the site.
+* Each of the pages links to the about page, essentials, card information, decks, how to play, and the current banlist allowing for easy navigation between the tabs.
+* In the image below it shows that whenever a user is on the current page it is highlighted underneath a small purple line.
+* Hovering over the menu will turn the highlighted word in a different color.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  ![Navigation tabs](doc/screenshots/tabs.webp)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### **Hero Images**
+* I have only added the hero image on the main home-page to act as the main attraction at which people would see once they open the link.
+* The image has a zoom animation to attract the user to make it more presentable. 
+* Each of the iamges used in this project is within them of Yugioh or explaining the functionality of the cards.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### **Home-Page**:
+#### *Hero-Image:*
+The picture used in as the hero image is none other than Linkuriboh, this cute round monster has appeared on the anime series of Yu-Gi-Oh Vrains which is the first to introduce Link summoning which is later introduced in the TCG game.
+![Home-page hero-image](doc/screenshots/linkuriboh.jpg)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### **Essentials-Page**:
+#### *Hero-Image:*
+the picture used for the main banner for all of the pages is from a fan based site which produce incredible wallpapers for all Yu-Gi-Oh fans.
+![Essentials-page hero-image](doc/screenshots/yugioh-wallpaper.jpg)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## **Anchor Tags Within the Pages Contents**
+* All anchor tags that have been used in the page's contents do not have a under-lined hyperlink.
+* Instead there is a color change upon hovering the links and also a color change upon visting the pages.
+* The Hoevr over effect on all th ehyper links show a red color contrast from the original gold text to indicate the user about to select a different link.
+* Have a hover-over effect that turns the Hyperlink a darker color from the gold gradient used throughout the page.
+* At which i have created a seperate code in style.css to show that once the user has been to the site it will change from gold to red.
 
-------
+## **Footer**
+* The footer has direct links to all of the offcial social media accounts of the Yu-Gi-oh franchise with an open invitation to follow all channels. 
 
-## FAQ about the uptime script
+* All the icons were imported from  the font awesome site using Javascript at the bottom of the page.
 
-**Why have you added this script?**
+* In some of the footers on the rest of the pages I have included that a disclaimer that the site that is being built is merely a fan-based site at which it acts as a guide for returning or new players interested in the franchise and that all of the stated material goes to the rightful owners of the Yu-Gi-Oh franchise of STUDIO DICE/SHUEISHA, TV TOKYO, and KONAMI.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Footer-Page](doc/screenshots/footer.webp)
 
-**How will this affect me?**
+## **Typesetting**
+ Throughput the project all of the fonts that were used were primarily 
+  * Oswald - for an eyecatching look.
+  * Space mono- for the retro gaming effect it has.#
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+  * All Fonts that have been sued have been sourced from Google Fonts (as quoted in the credits)
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## **Individual Page Contents features**
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### **Home-Page Contents:**
 
-**So….?**
+* The main page gives a brief overview of what yugioh is. 
+* The linked youtube video is showcasing tips and tricks on returning player son how to get better at the TCG game. 
+![About-Page](doc/screenshots/about-page.webp)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### **Essentials-Page Contents:**
 
-**Can I opt out?**
+* This page gives you information at which the person needs certain resources if they choose to play th egame in real life.
+* It also states the various different accessories which are available to enhance the users exeprience such as card sleeves for the added protection of the cards and the aesthetically pleasing artwork offered on said card sleeves or game mats.
+* It also shows a diagram showing the different indicated numbers of the playing mat at which players have to set up their own decks.
+![What-you-need](doc/screenshots/what-you-need.webp)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### **Cardinfo-Page Contents:**
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* This page explains on the basic structure of the card, consisting of the name, card description, the type, the attribute, level, the printed official card number, and its attack and defense points.
+* below it explains the different card effects that cards have and how each one has its own use in any given situation.
+![Reading-cards](doc/screenshots/reading-cards.webp) 
 
-**Anything more?**
+### **Decks-Page Contents:**
+* The Decks page offer fan favourites to the top tier meta cards at which many players use in various tournaments.
+* Each of the cards are clickable and will send the user to an external site which will show teh user of the full deck to build, if they choose to do so.
+![Decks-page](doc/screenshots/top-10-decks.webp)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+### **How-to-play-Page Contents:**
+* This is a tutorial at which it showcases a step-by-step guide on howto play the game explaining the turn systems and how toplay various different cards.
+* It also explains the different scenarios at which players can tactically play at their discretion and th evarious Spell and trap icons and meanings behind the cards.
+![How-to-play-page](doc/screenshots/how-a-turn-works.webp)
 
----
+### **Banlist-Page Contents:**
+* This just shows a very static list of all of the upadated various cards that have been banned in any sort of offcial competition setting by Konami.
+* My Original idea was to link each of the cards to the data-base of the offcial Yu-Gi-Oh site but it will be mentioned in the [Potential-Features](#potential-features). 
+![Banlist-Page](doc/screenshots/current-banlist.webp)
 
-Happy coding!
+
+## **Potential-Features**
+* Due to the project deadlines being very tight urgent the project had to be scaled down to a more simpler version of the geography quiz but these are the features that i would like to potentially add or implement in the near future:
+    * An initeractive version with sounds and unique animations.
+    * Potentially adding a leaderboard system / table to challenge and rival other users.
+    * A narration voice over for all the questions and answers for users with disablity issues.
+-->
+***
+## **Testing-Phase**
+<!--  <> [TESTING.md](TESTING.md) -->
+***
+## **Deployment**
+The project has been deployed with the following steps: -
+<!--
+1. Within the project's [repository](https://github.com/leebri101/Yu-Gi-Oh-Guide), you then select the **Settings** tab.
+2. Then select the **Pages** menue tab on the left side.
+3. Under **Source** then, select the **Main** branch from the drop-down menu and click **Save**.
+4. A message will then show that the porject has been successfully launched with the live link.
+
+You can visit the live link via this URL - [Yu-Gi-Oh-Guide](https://leebri101.github.io/Yu-Gi-Oh-Guide/index.html)-->
+***
+
+ ## **Credits**
+### **Honorable mentions**
+The second project was a very interesting but difficult challenge, which tested my understanding of HTML & CSS but to incorperate JavaScript too. However the more stuff that was being introduced to the project the more simpler and effective the project became due to time restraints of the course, but nonetheless it is a good way to show what i can do, but i must credit the following people:
+ * [Can Sucullu](https://github.com/cansucullu) - My Code Institute mentor who is incredible at giving me insite and suggestions on further improving my project and is a huge help to continuously support me for any sort of technical issues within the project.
+* The Slack community of Code Institute for helping me the JavaScript module as it is somewhat challenging due to the deadline and questions on the module. 
+* My older brother for always being available for being a personal guinea pig for my projects (and with many more to come) and giving me constant constructive feedback all the time.
+* Huge thanks to my girlfriend for the constant support and nagging me to stay focussed whenever i get distacted and also giving me useful advice and insight.
+
+
+### **General reference:**
+* The project theme was inspired by the Code Institute's coding project called Love Maths. I have tried to change as much as possible but there may be some similarties within the codes.
+* I have used W3Schools for a basic understanding and learning process for knowing JavaScript a bit better, and for general basic coding references and as general encyclopedia for any code related issues or ideas.
+
+### **Content:**
+* All icons that were used throughout the project are sourced from [Font-Awesome](https://fontawesome.com/)
+* All fonts used have been imported from - [Google-Fonts](https://fonts.google.com/)
+
+  
+### **Media:**
+* Background image on the home-page on index.html - [World-Globe](https://www.wallpaperflare.com/globe-world-map-earth-global-travel-planet-geography-wallpaper-akzmf/download)
+
+* Favicon for tab of page on index.html - [Favicon-Globe](https://www.flaticon.com/free-icon/earth-globe_616616)
+
+* General RGB color Table used in style.css - [RGB-Table](https://www.rapidtables.com/web/color/RGB_Color.html)
+
+* Image compressions- [TinyPNG](https://tinypng.com/) 
+
+* Colored grid scheme - [EightShapes](https://contrast-grid.eightshapes.com/) 
