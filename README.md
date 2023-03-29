@@ -249,4 +249,4 @@ The second project was a very interesting but difficult challenge, which tested 
 
 * Image compressions- [TinyPNG](https://tinypng.com/) 
 
-* Colored grid scheme - [EightShapes](https://contrast-grid.eightshapes.com/) 
+* Colored grid scheme - [EightShapes](https://contrast-grid.eightshapes.com/)
