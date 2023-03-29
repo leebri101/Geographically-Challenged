@@ -22,16 +22,24 @@
         </section>
         <section>
             <!-- Start game section-->   
-            <section id = "new-game">
-                
-                <div class="score-area">
-                    <p class="scores">Correct Answers</p> <span id="score">0</span>
-                    <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
-                </div>
+            <section id = "start-game" class = "flex-column flex-center rounded-border max-width">
+                <p class="light-blue margin-zero padding">Please Enter Your Name:</p>
+                <input type= "text" id = "player-name" class="text-center padding rounded-border" 
+                placeholder="Please Enter Your Name" aria-label="Please Enter Your Name" required>
+                <section class="start-game-btn-holder margin">
+                    <button type = "button" id = "start-quiz-btn" class= "border" 
+                    aria-label= "Start Quiz">Let's Play</button>
+                    <button type = "button" id = "leave-quiz-btn" class= "border" 
+                    aria-label= "Bsck to Main Menu">Quit</button>
+                </section>
             </section>
         </section>     
     </main>
-
+                <!--
+                <div class="score-area">
+                    <p class="scores">Correct Answers</p> <span id="score">0</span>
+                    <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
+                </div>-->
     
     <footer id="footer" class="width" style="display">
         <p>Follow me for more:</p>
