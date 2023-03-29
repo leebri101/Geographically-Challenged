@@ -10,7 +10,8 @@ const playButton = document.getElementById("play-btn");
 const newGameSection = document.getElementById("new-game");
 const playerName = document.getElementById("player-name");
 const startQuizBtn = document.getElementById("start-quiz-btn");
-const leaveQuizBtn = documen.getElementById("leave-quiz-btn");
+const leaveQuizBtn = document.getElementById("leave-quiz-btn");
+
 
 function startNewGame(){
     landingSection.style.display = "none";
@@ -20,13 +21,16 @@ function startNewGame(){
 
 playButton.addEventListener("click", startNewGame);
 
+// Start game section
 function leaveQuiz(){
-    playerName.value = '';
-    landingSection.style.display = "inline-flex";
+    playerName.value = "";
+    landingSection.style.display = "inline-flex";;
     newGameSection.style.display = "none";
 }
 
 leaveQuizBtn.addEventListener("click", leaveQuiz);
+
+
 /*
 function endOfQuiz(){
     footerSection.style.display = "block";
