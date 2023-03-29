@@ -9,9 +9,40 @@
 }
 
 :root{
+    /* light blue */
+    --color-one: 38, 136, 172;
+    /* black rock */
+    --color-two: 43, 45, 58;
+    /* dark green */
+    --color-three: 0, 73, 20;
+    /* light pink */
+    --color-four: 255, 182, 193;
+    /* deep pink */
+    --color-five: 255, 20, 147;
+
 
 }
 
+/* Color Classes*/
+.light-blue{
+    color: rgb(var(--color-one))
+}
+
+.black-rock{
+    color: rgb(var(--color-two))
+}
+
+.dark-green{
+    color: rgb(var(--color-three))
+}
+
+.light-pink{
+    color: rgb(var(--color-four))
+}
+
+.deep-pink{
+    color: rgb(var(--color-five))
+}
 
 /* Body, Footer, Header styling */
 body{
@@ -27,13 +58,16 @@ body{
     min-height: 100vh;
 }
 
+header{
+    position: sticky;
+    text-align: center;
+}
+
 footer {
-    background-color: #2B2D3A;
-    background: translucent;
+    background-color: rgba(var(--color-two), 0.90);
     position: fixed;
     bottom: 0;
-    border-top-left-radius: 60% 80%;
-    border-top-right-radius: 60% 80%;
+    border: 60%;
 }
 
 footer p {
@@ -51,22 +85,16 @@ footer p {
  
 /* styling classes that have been reused */
 a:link{
-    color: #2688AC;
-    background-color: transparent;
-    text-decoration: none;
+    color: rgba(var(--color-one), 0.85);
 }
 
 a:visited{
     color: #fff;
-    background-color: transparent;
-    text-decoration: none;
-    
 }
 
 a:hover{
-    color:#ecf74c;
-    background-color: transparent;
-    text-decoration: none; 
+    color: rgba(var(--color-one), 0.85);
+    animation: pulse 1s;
 }
 
 div {
@@ -90,16 +118,39 @@ div {
     display: inline-flex;
 }
 
-#play-button{
+#play-btn{
     font-size: 200px;
     border-radius: 50%;
+    color: rgb(var(--color-one));
 }
 
-#play-button:hover{
+#play-btn:hover{
     font-size: 200px;
     border-radius: 50%;
+    background-color: rgba(var(--color-two), 0.80);
+    color: rgba(var(--color-four), 1);
+    animation: pulse 0.5s;
 }
 
-#question-box{
+/* Start Game section*/
+#new-game
 
+/* Animations */
+
+.pulse{
+    animation: pulse 1s ease 0s 1 normal forwards;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
