@@ -5,7 +5,8 @@ const quizLength = 10;
 let correctNum = 0;
 let questionCount = 0;
 const footerSection = document.getElementById("footer");
-const landingSection = document.getElementById("landing")
+const landingSection = document.getElementById("landing");
+const playButton = document.getElementById("play-btn")
 
 
 function startNewGame(){
