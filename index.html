@@ -9,34 +9,30 @@
         <title>Geography Quiz</title>
 </head>
 <body>
-    <header>
-        <h1 class="heading">
+    <header id="heading">
+        <h1>
             <i class="fa-solid fa-earth-europe fa-2xl" style="color: #4c8df7;"></i> Geography Quiz
         </h1>
-        <p>How well are you Geographically placed?</p>
+        <p class="deep-pink">How well are you Geographically placed?</p>
     </header>
+    <!-- Landing section with Call To Action input-->
     <main class="width">
-        <section id = "landing" class="landing">
-            <i class="fa-solid fa-play fa-2xl" style="color: #2688ac;" id="play-button" aria-label = "Press play to start"></i>
+        <section id= "landing" class="landing">
+            <i class="fa-solid fa-play fa-2xl" id="play-btn" aria-label = "Press play to start"></i>
         </section>
+        <section>
+            <!-- Start game section-->   
+            <section id = "new-game">
+                
+                <div class="score-area">
+                    <p class="scores">Correct Answers</p> <span id="score">0</span>
+                    <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
+                </div>
+            </section>
+        </section>     
     </main>
-    <div class="game-area">
-        <div class ="controls-area">
-            <button class = "btn btn--big"></button>
-        </div>
-        <div class = "quiz box">
-            <span id = "operand1"></span>
-        </div>
 
-
-    </div>
-
-
-    <div class="score-area">
-        <p class="scores">Correct Answers</p> <span id="score">0</span>
-        <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
-    </div>
-
+    
     <footer id="footer" class="width" style="display">
         <p>Follow me for more:</p>
         <a href="https://github.com/leebri101" target="_blank" rel="noopener"
