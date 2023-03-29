@@ -3,37 +3,44 @@
     
 <head>
         <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Geographically Challenged is a geography quiz game">
         <link rel = "icon" href = "assets/images/globe-icon.png" type="image/x-icon" sizes="32x32">
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-        <title>Geography Quiz</title>
+        <title>Geographically Challenged</title>
 </head>
-<body>
-    <header id="heading">
+<body class = "flex-column flex-center margin-zero text-center">
+    <!-- Header -->
+    <header>
         <h1>
-            <i class="fa-solid fa-earth-europe fa-2xl" style="color: #4c8df7;"></i> Geography Quiz
-        </h1>
-        <p class="deep-pink">How well are you Geographically placed?</p>
+            <!--<i class="fa-solid fa-earth-europe fa-2xl" style="color: rgb(var(--color-three));"></i> --> Geographically
+        <p class="deep-pink" style = "font-weight: bold;">How well are you Geographically placed?</p>
     </header>
-    <!-- Landing section with Call To Action input-->
+
     <main class="width">
+        <!-- Landing section with play button-->
         <section id= "landing" class="landing">
-            <i class="fa-solid fa-play fa-2xl" id="play-btn" aria-label = "Press play to start"></i>
+            <i class="fa-solid fa-play" id="play-btn" aria-label = "Press play to start" aria-hidden="true"></i>
         </section>
         <section>
             <!-- Start game section-->   
-            <section id = "start-game" class = "flex-column flex-center rounded-border max-width">
-                <p class="light-blue margin-zero padding">Please Enter Your Name:</p>
-                <input type= "text" id = "player-name" class="text-center padding rounded-border" 
+            <section id = "new-game" class = "flex-column flex-center rounded-border max-width">
+                <p class="margin-zero padding" style= "color: #005df3; font-weight: bold; 
+                text-align: center;">Player Name:</p>
+                <input type= "text" id = "player-name" class="text-center padding rounded-border font-weight" 
                 placeholder="Please Enter Your Name" aria-label="Please Enter Your Name" required>
                 <section class="start-game-btn-holder margin">
                     <button type = "button" id = "start-quiz-btn" class= "border" 
                     aria-label= "Start Quiz">Let's Play</button>
                     <button type = "button" id = "leave-quiz-btn" class= "border" 
-                    aria-label= "Bsck to Main Menu">Quit</button>
+                    aria-label= "Back to Main Menu">Quit</button>
                 </section>
             </section>
-        </section>     
+        </section>
+        <section>
+
+        </section>    
     </main>
                 <!--
                 <div class="score-area">
@@ -41,9 +48,9 @@
                     <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
                 </div>-->
     
-    <footer id="footer" class="width" style="display">
+    <footer id="footer" class="width">
         <p>Follow me for more:</p>
-        <a href="https://github.com/leebri101" target="_blank" rel="noopener"
+        <a class= "social" href="https://github.com/leebri101" target="_blank" rel="noopener"
             aria-label="Please visit my Github page (opens in new tab)">
             <i class="fa-brands fa-github fa-2xl"></i>
         </a>
