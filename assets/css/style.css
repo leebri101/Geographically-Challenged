@@ -74,7 +74,7 @@ footer p {
     margin: 0.5em 0;
 }
 
-
+/* displaying & hiding sections from script,js*/
 .show-block {
     display: block;
 }
@@ -82,10 +82,15 @@ footer p {
 .show-inline-flex{
     display: inline-flex;
 }
+
+.hide{
+    display: none;
+}
  
 /* styling classes that have been reused */
 a:link{
     color: rgba(var(--color-one), 0.85);
+    animation: pulse 1s;
 }
 
 a:visited{
@@ -94,7 +99,6 @@ a:visited{
 
 a:hover{
     color: rgba(var(--color-one), 0.85);
-    animation: pulse 1s;
 }
 
 div {
@@ -121,22 +125,53 @@ div {
 #play-btn{
     font-size: 200px;
     border-radius: 50%;
-    color: rgb(var(--color-one));
+    color: rgba(var(--color-one), 0.70);
+    justify-content: center;
 }
 
 #play-btn:hover{
     font-size: 200px;
     border-radius: 50%;
-    background-color: rgba(var(--color-two), 0.80);
-    color: rgba(var(--color-four), 1);
+    background-color: rgba(var(--color-two), 0.70);
+    color: rgba(var(--color-four), 0.70);
     animation: pulse 0.5s;
+    justify-content: center;
 }
 
 /* Start Game section*/
-#new-game
+#start-game{
+    background-color: rgba(var(--color-one)0.80);
+    width: calc(80% - 1em);
+    display: none;
+}
+
+::placeholder{
+    color: rgb(var(--color-two));
+}
+
+#player-name{
+    font-size: 1.3em;
+    width: calc(80% - 1em);
+}
+
+.start-game-btn-holder{
+    display: flex;
+    justify-content: space-evenly;
+    width: calc(80% - 1em);
+}
+
+#start-quiz-btn,
+#leave-quiz-btn{
+    background-color: rgba(var(--color-one), 0.85);
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0.5em 0.5em; 
+}
+
+
 
 /* Animations */
-
 .pulse{
     animation: pulse 1s ease 0s 1 normal forwards;
 }
