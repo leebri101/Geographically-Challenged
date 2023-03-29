@@ -1,6 +1,7 @@
 /* import google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
 /* root */
 *,
 *::before,
@@ -19,8 +20,6 @@
     --color-four: 255, 182, 193;
     /* deep pink */
     --color-five: 255, 20, 147;
-
-
 }
 
 /* Color Classes*/
@@ -44,6 +43,7 @@
     color: rgb(var(--color-five))
 }
 
+
 /* Body, Footer, Header styling */
 body{
     color: white;
@@ -59,15 +59,23 @@ body{
 }
 
 header{
-    position: sticky;
+    position: fixed;
     text-align: center;
+}
+header h1 {
+    margin-bottom: 0;
+}
+header p {
+    font-size: 15px;
+    margin-top: 0;
 }
 
 footer {
     background-color: rgba(var(--color-two), 0.90);
     position: fixed;
     bottom: 0;
-    border: 60%;
+    border-top-left-radius: 60% 80%;
+    border-top-right-radius: 60% 80%;
 }
 
 footer p {
@@ -83,14 +91,13 @@ footer p {
     display: inline-flex;
 }
 
-.hide{
+.hidden{
     display: none;
 }
  
-/* styling classes that have been reused */
-a:link{
-    color: rgba(var(--color-one), 0.85);
-    animation: pulse 1s;
+/* Generic styling classes that have been reused */
+.social{
+    font-size: 1.9em;
 }
 
 a:visited{
@@ -101,6 +108,15 @@ a:hover{
     color: rgba(var(--color-one), 0.85);
 }
 
+h1::after{
+    content: "Challenged";
+    color: #4c8df7;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family: 'Poppins', arial, sans-serif;
+    margin
+}
+/*
 div {
     width: 200px;
     height: 100px;
@@ -111,10 +127,49 @@ div {
   div:hover {
     background-color: #FF1493;
   }
+*/
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-weight{
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rounded-border {
+    border-radius: 10px;
+}
+
+.padding {
+    padding: 0.5em;
+}
+
+.margin {
+    margin: 0.5em;
+}
+
+.margin-zero{
+    margin: 0;
+}
+    
 .width {
     width: 100vw;
+}
+
+.max-width{
+    max-width: 650px;
 }
 
 /* landing and call to action styling */
@@ -126,23 +181,23 @@ div {
     font-size: 200px;
     border-radius: 50%;
     color: rgba(var(--color-one), 0.70);
-    justify-content: center;
 }
 
 #play-btn:hover{
     font-size: 200px;
     border-radius: 50%;
-    background-color: rgba(var(--color-two), 0.70);
     color: rgba(var(--color-four), 0.70);
     animation: pulse 0.5s;
-    justify-content: center;
 }
 
 /* Start Game section*/
 #start-game{
-    background-color: rgba(var(--color-one)0.80);
-    width: calc(80% - 1em);
+    background-color: rgba(var(--color-two)0.85);
+    width: calc(90% - 1em);
     display: none;
+}
+section p {
+    font-size: 20px;
 }
 
 ::placeholder{
@@ -151,25 +206,23 @@ div {
 
 #player-name{
     font-size: 1.3em;
-    width: calc(80% - 1em);
+    width: calc(90% - 1em);
 }
 
 .start-game-btn-holder{
     display: flex;
     justify-content: space-evenly;
-    width: calc(80% - 1em);
+    width: calc(90% - 1em);
 }
 
 #start-quiz-btn,
 #leave-quiz-btn{
     background-color: rgba(var(--color-one), 0.85);
-    color: white;
-    font-size: 1.3em;
+    color: #fff;
+    font-size: 1.2em;
     text-align: center;
-    padding: 0.5em 0.5em; 
+    padding: 0.25em 0.5em; 
 }
-
-
 
 /* Animations */
 .pulse{
