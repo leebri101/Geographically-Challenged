@@ -11,15 +11,25 @@
 
 :root{
     /* light blue */
-    --color-one: 38, 136, 172;
+    --color-one: 76, 141, 247;
+
+    /* navy blue */
+    --color-two: 3, 57, 152; 
+
     /* black rock */
-    --color-two: 43, 45, 58;
+    --color-three: 43, 45, 58;
+
+    /* forest green */
+    --color-four: 1, 171, 46;
+
     /* dark green */
-    --color-three: 1, 171, 46 ;
+    --color-five: 4, 98, 29;
+
     /* light pink */
-    --color-four: 255, 182, 193;
+    --color-six: 255, 182, 193;
+
     /* deep pink */
-    --color-five: 255, 20, 147;
+    --color-seven: 255, 20, 147;
 }
 
 /* Color Classes*/
@@ -27,20 +37,28 @@
     color: rgb(var(--color-one))
 }
 
-.black-rock{
+.navy blue {
     color: rgb(var(--color-two))
 }
 
-.dark-green{
+.black-rock{
     color: rgb(var(--color-three))
 }
 
-.light-pink{
+.forest-green{
     color: rgb(var(--color-four))
 }
 
-.deep-pink{
+.dark-green{
     color: rgb(var(--color-five))
+}
+
+.light-pink{
+    color: rgb(var(--color-six))
+}
+
+.deep-pink{
+    color: rgb(var(--color-seven))
 }
 
 /* Body, Footer, Header styling */
@@ -70,7 +88,7 @@ header p {
 }
 
 header span{
-    color: #4c8df7;
+    color: rgb(var(--color-one));
     font-weight: bolder;
     text-transform: uppercase;
     font-family: 'Poppins', arial, sans-serif;
@@ -78,7 +96,7 @@ header span{
 }
 
 footer {
-    background-color: rgba(var(--color-two), 0.90);
+    background-color: rgba(var(--color-three), 0.90);
     position: fixed;
     bottom: 0;
     border-top-left-radius: 60% 80%;
@@ -89,7 +107,7 @@ footer p {
     margin: 0.5em 0;
 }
 
-/* displaying & hiding sections from script,js*/
+/* displaying & hiding sections from script.js*/
 .show-block {
     display: block;
 }
@@ -104,7 +122,7 @@ footer p {
  
 /* Generic styling classes that have been reused */
 .social{
-    font-size: 1.9em;
+    font-size: 2em;
 }
 
 a:visited{
@@ -114,9 +132,6 @@ a:visited{
 a:hover{
     color: rgba(var(--color-one), 0.85);
 }
-
-
-
 
 /*
 div {
@@ -144,6 +159,10 @@ div {
 
 .font-weight{
     font-weight: bold;
+}
+
+.text-transform{
+    text-transform: uppercase;
 }
 
 .text-center {
@@ -182,19 +201,19 @@ div {
 #play-btn{
     font-size: 200px;
     border-radius: 50%;
-    color: rgba(var(--color-one), 0.70);
+    color: rgba(var(--color-one), 0.85);
 }
 
 #play-btn:hover{
     font-size: 200px;
     border-radius: 50%;
-    color: rgba(var(--color-four), 0.70);
+    color: rgba(var(--color-six), 0.85);
     animation: pulse 0.5s;
 }
 
 /* Start Game section*/
 #start-game{
-    background-color: rgba(var(--color-two)0.85);
+    background-color: rgba(var(--color-three)0.85);
     width: calc(90% - 1em);
     display: none;
 }
@@ -203,7 +222,7 @@ section p {
 }
 
 ::placeholder{
-    color: rgb(var(--color-two));
+    color: rgb(var(--color-three));
 }
 
 #player-name{
@@ -219,11 +238,54 @@ section p {
 
 #start-quiz-btn,
 #leave-quiz-btn{
-    background-color: rgba(var(--color-one), 0.85);
+    background-color: rgba(var(--color-five), 0.85);
     color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
     font-size: 1.2em;
     text-align: center;
     padding: 0.25em 0.5em; 
+}
+
+/* Quiz section */
+
+#quiz {
+    display: none;
+}
+
+#question-box{
+    background-color: rgba(var(--color-five), 0.85);
+    border: 3px solid rgba(var(--color-three));
+    color: #fff;
+    display: inline-flex;
+    width: 80vw;
+}
+
+#answer-box{
+    display: inline-flex;
+    width: 80vw;
+    margin: 1em 0;
+}
+
+.answers{
+    background-color: #fff;
+    font-weight: bolder;
+    color: black;
+    border: 3px solid rgb(var(--color-seven));
+    border-radius: 15px;
+    border: 3px solid rgb(var(--color-seven));
+    margin: 0.25em 0;
+    width: 100%;
+    padding: 0.25em;
+}
+.answers-selected{
+    background-color: #fff;
+    background: rgb(var(--color-six));
+    transition: background-color 0.25s ease-out 100ms
+    }
+      
+    .answers:hover {
+    background-color: rgb(var(--color-seven));
 }
 
 /* Animations */
