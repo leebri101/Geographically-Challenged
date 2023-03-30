@@ -32,21 +32,49 @@ function leaveQuiz(){
 leaveQuizBtn.addEventListener("click", leaveQuiz);
 
 
-function startQuiz();
+function startQuiz(){;
 if (playerName.value == "" || playerName == null || playerName == undefined){
     playerName.style.borderBlockColor = "red"
-} else{
+  } else{
     quizSection.style.display = "inline-flex";
     newGameSection.style.display = "none";
     headerSection.style.display = "none";
     footerSection.style.display = "none";
+    shuffle(quizQuestions);
+  }
 }
 
 
-/*
+/* "Fisher Yates" method is used to shuffle quiz questions in any given order.
+* 
+* Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
+*/
+
+function shuffle(array) {
+    let m = array.length, t, i;
+
+    // While there remain elements to shuffle…
+    while (m) {
+  
+      // Pick a remaining element…
+      i = Math.floor(Math.random() * m--);
+  
+      // And swap it with the current element.
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+  
+    return array;
+  }
+
+
 function endOfQuiz(){
     footerSection.style.display = "block";
+    quizSection.style.display = "none"
 }
+
+/*
 function checkAnswer(){
 
 }
