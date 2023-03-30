@@ -10,15 +10,14 @@
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
         <title>Geographically Challenged</title>
 </head>
-<body class = "flex-column flex-center margin-zero text-center">
+<body class = "flex-column flex-center margin-zero text-center width">
     <!-- Header --> 
-    <header>
+    <header class= "width" id = "header">
         <h1>
-            <i class="fa-solid fa-earth-europe fa-2xl" style="color: rgb(var(--color-three));"></i> Geographically
+            <i class="fa-solid fa-earth-europe fa-2xl" style="color: rgb(var(--color-four));"></i> Geographically
             <span> Challenged</span></h1>
         <p class="deep-pink" style = "font-weight: bold;">How well are you Geographically placed?</p>
     </header>
-
     <main class="width">
         <!-- Landing section with play button-->
         <section id= "landing" class="landing">
@@ -26,9 +25,9 @@
         </section>
         <section>
             <!-- Start game section-->   
-            <section id = "new-game" class = "flex-column flex-center rounded-border max-width">
-                <p class="margin-zero padding" style= "color: #005df3; font-weight: bold; 
-                text-align: center;">Player Name:</p>
+            <section id = "start-game" class = "flex-column flex-center rounded-border max-width" aria-hidden ="true">
+                <p class="margin-zero padding font-weight text-center text-transform" style= "color: rgb(var(--color-two))";>
+                    Player Name:</p>
                 <input type= "text" id = "player-name" class="text-center padding rounded-border font-weight" 
                 placeholder="Please Enter Your Name" aria-label="Please Enter Your Name" required>
                 <section class="start-game-btn-holder margin">
@@ -38,10 +37,28 @@
                     aria-label= "Back to Main Menu">Quit</button>
                 </section>
             </section>
-        </section>
-        <!-- Quiz section -->
-        <section id = "quiz" class = "flex-column flex-center rounded-border max-width">
+            </section>
+            <!-- Quiz section -->
+            <section id = "quiz" class = "flex-column flex-center rounded-border max-width">
 
+
+                <!-- Questions & answer options -->
+                <section id = "question-box"
+                class = "flex-center padding text-center margin-zero max-width">
+                <p>Question text goes here</p>
+                </section>
+                <section id = "answer-box" class= "flex-column text-center flex-center margin-zero max-width">
+                    <p id= "answer1" class= "answer text-center padding max-width">
+                        Answer1 text goes here
+                    </p>
+                    <p id= "answer2" class= "answer text-center padding max-width">
+                        Answer2 text goes here
+                    </p>
+                    <p id= "answer3" class= "answer text-center padding max-width">
+                        Answer3 text goes here</p>
+                    <p id= "answer4" class= "answer text-center padding max-width">
+                        Answer4 text goes here</p>
+                </section>
         </section>    
     </main>
                 <!--
