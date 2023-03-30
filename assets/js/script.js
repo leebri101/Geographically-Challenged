@@ -4,6 +4,7 @@
 const quizLength = 10;
 let correctNum = 0;
 let questionCount = 0;
+const headerSection = document.getElementById("header");
 const footerSection = document.getElementById("footer");
 const landingSection = document.getElementById("landing");
 const playButton = document.getElementById("play-btn");
@@ -29,6 +30,17 @@ function leaveQuiz(){
 }
 
 leaveQuizBtn.addEventListener("click", leaveQuiz);
+
+
+function startQuiz();
+if (playerName.value == "" || playerName == null || playerName == undefined){
+    playerName.style.borderBlockColor = "red"
+} else{
+    quizSection.style.display = "inline-flex";
+    newGameSection.style.display = "none";
+    headerSection.style.display = "none";
+    footerSection.style.display = "none";
+}
 
 
 /*
