@@ -8,10 +8,18 @@ const headerSection = document.getElementById("header");
 const footerSection = document.getElementById("footer");
 const landingSection = document.getElementById("landing");
 const playButton = document.getElementById("play-btn");
-const newGameSection = document.getElementById("new-game");
+const newGameSection = document.getElementById("start-game");
 const playerName = document.getElementById("player-name");
 const startQuizBtn = document.getElementById("start-quiz-btn");
 const leaveQuizBtn = document.getElementById("leave-quiz-btn");
+const quizSection = document.getElementById("quiz");
+const question = document.getElementById("question-box");
+const answerBox = document.getElementById("answer-box");
+const optionOne = document.getElementById("answer1");
+const optionTwo = document.getElementById("answer2");
+const optionThree = document.getElementById("answer3");
+const optionFour = document.getElementById("answer4");
+
 
 
 function startNewGame(){
