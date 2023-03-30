@@ -15,7 +15,7 @@
     /* black rock */
     --color-two: 43, 45, 58;
     /* dark green */
-    --color-three: 0, 73, 20;
+    --color-three: 1, 171, 46 ;
     /* light pink */
     --color-four: 255, 182, 193;
     /* deep pink */
@@ -61,13 +61,20 @@ body{
 header{
     position: fixed;
     text-align: center;
+    top: 0;
 }
-header h1 {
-    margin-bottom: 0;
-}
+
 header p {
     font-size: 15px;
     margin-top: 0;
+}
+
+header span{
+    color: #4c8df7;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Poppins', arial, sans-serif;
+    margin:0;
 }
 
 footer {
@@ -108,14 +115,9 @@ a:hover{
     color: rgba(var(--color-one), 0.85);
 }
 
-h1::after{
-    content: "Challenged";
-    color: #4c8df7;
-    font-weight: bolder;
-    text-transform: capitalize;
-    font-family: 'Poppins', arial, sans-serif;
-    margin
-}
+
+
+
 /*
 div {
     width: 200px;
