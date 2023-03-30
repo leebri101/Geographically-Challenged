@@ -43,7 +43,6 @@
     color: rgb(var(--color-five))
 }
 
-
 /* Body, Footer, Header styling */
 body{
     color: white;
@@ -65,8 +64,9 @@ header{
 }
 
 header p {
-    font-size: 15px;
+    font-size: 20px;
     margin-top: 0;
+    text-align: center;
 }
 
 header span{
