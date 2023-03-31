@@ -19,7 +19,7 @@ const optionOne = document.getElementById("answer1");
 const optionTwo = document.getElementById("answer2");
 const optionThree = document.getElementById("answer3");
 const optionFour = document.getElementById("answer4");
-
+const timeRemaining = document.getElementById("time-remaining")
 
 
 function startNewGame(){
@@ -49,6 +49,9 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
     headerSection.style.display = "none";
     footerSection.style.display = "none";
     shuffle(quizQuestions);
+    formQuizQuestion(questionCount);
+    progressBar(questionCount);
+    countDown();
   }
 }
 
@@ -76,6 +79,8 @@ function shuffle(array) {
     return array;
   }
 
+
+function countDown(){}
 
 function endOfQuiz(){
     footerSection.style.display = "block";
