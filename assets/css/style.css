@@ -288,7 +288,18 @@ section p {
     background-color: rgb(var(--color-seven));
 }
 
-/* Feedback to users [during game] */
+/* Question tracker and timmer */
+.quiz-tracker{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 2.20em 0;
+    background-color: rgba(var(--color-one), 0.85);
+}
+
+
+
+/* Feedback to users during game */
 #point-tracker{
     display: inline-flex;
     background-color: rgba(var(--color-three)), 0.70;
