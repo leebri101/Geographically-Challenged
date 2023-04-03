@@ -6,13 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Geographically Challenged is a geography quiz game">
-        <link rel = "icon" href = "assets/images/globe-icon.png" type="image/x-icon" sizes="32x32">
+        <link rel="icon" href="assets/images/globe-icon.png" type="image/x-icon" sizes="32x32">
         <link rel="stylesheet" href="assets/css/style.css" type="text/css">
         <title>Geographically Challenged</title>
 </head>
 <body class = "flex-column flex-center margin-zero text-center width">
     <!-- Header --> 
-    <header class= "width" id = "header">
+    <header class="width" id="header">
         <h1>
             <i class="fa-solid fa-earth-europe fa-2xl" style="color: rgb(var(--color-four));"></i> Geographically
             <span> Challenged</span></h1>
@@ -20,89 +20,98 @@
     </header>
     <main class="width">
         <!-- Landing section with play button-->
-        <section id= "landing" class="landing">
-            <i class="fa-solid fa-play" id="play-btn" aria-label = "Press play to start" aria-hidden="true"></i>
+        <section id="landing" class="landing">
+            <i class="fa-solid fa-play" id="play-btn" aria-label = "Press play to start"></i>
         </section>
         <section>
             <!-- Start game section-->   
-            <section id = "start-game" class = "flex-column flex-center rounded-border max-width">
-                <p class="margin-zero padding font-weight text-center text-transform" style= "color: rgb(var(--color-two))";>
+            <section id="start-game" class="flex-column flex-center rounded-border max-width">
+                <p class="margin-zero padding font-weight text-center text-transform" style="color: rgb(var(--color-two))";>
                     Player Name:</p>
-                <input type= "text" id = "player-name" class="text-center padding rounded-border font-weight text-transform" 
+                <input type="text" id = "player-name" class="text-center padding rounded-border font-weight text-transform" 
                 placeholder="Please Enter Your Name" aria-label="Please Enter Your Name" required>
                 <section class="start-game-btn-holder margin">
-                    <button type = "button" id = "start-quiz-btn" class= "border" 
-                    aria-label= "Start Quiz">Let's Play</button>
-                    <button type = "button" id = "leave-quiz-btn" class= "border" 
-                    aria-label= "Back to Main Menu">Quit</button>
+                    <button type ="button" id = "start-quiz-btn" class= "border" 
+                    aria-label="Start Quiz">Let's Play</button>
+                    <button type ="button" id = "leave-quiz-btn" class= "border" 
+                    aria-label="Back to Main Menu">Quit</button>
                 </section>
             </section>
             </section>
             <!-- Quiz section -->
-            <section id = "quiz" class = "flex-column flex-center rounded-border max-width">
+            <section id="quiz" class="flex-column flex-center rounded-border max-width">
                 <!-- Quiz info bar-->
-                <section id = "quiz-tracker flex-center margin rounded-border max-width">
-                    <!-- Question tracker-->
-                    <div id = "question-number">
+                <section id="quiz-tracker flex-center margin rounded-border max-width">
+                    <!-- Question tracker -->
+                    <div id="question-number">
                         <p>Question: <span id ="current-question" style="font-weight: bolder;">-</span> of 
-                            <span id = "total-questions" style = "font-weight: bolder;">-</span></p>
+                            <span id="total-questions" style="font-weight: bolder;">-</span></p>
                     </div>
                     <!-- Timer -->
-                    <div id = "timer" class ="flex-column" style = "font-weight: bolder;">
-                        <p><i class="fa-regular fa-stopwatch fa-beat-fade fa-shake"></i> 
-                            <span id = "counter">20</span></p>
+                    <div id="timer" class="flex-column" style="font-weight: bolder;">
+                        <p><i class="fa-regular fa-stopwatch fa-shake"></i> 
+                            <span id="counter">20s</span></p>
                     </div>
-                    <div></div>
+                    <!-- Time Bar -->
+                    <div id="total-time" class="rounded-border">
+                        <div id="time-left" class="rounded-border"></div>
+                    </div>
                 </section>
-
                 <!-- Questions & answer options -->
-                <section id = "question-box"
-                class = "flex-center padding text-center margin-zero max-width">
+                <section id="question-box"
+                class="flex-center padding text-center margin-zero max-width">
                 <p>Question text goes here</p>
                 </section>
-                <section id = "answer-box" class= "flex-column text-center flex-center margin-zero max-width">
-                    <p id= "answer1" class= "answer text-center padding max-width">
+                <section id ="answer-box" class="flex-column text-center flex-center margin-zero max-width">
+                    <p id="answer1" class="answer text-center padding max-width">
                         Answer1 text goes here
                     </p>
-                    <p id= "answer2" class= "answer text-center padding max-width">
+                    <p id="answer2" class="answer text-center padding max-width">
                         Answer2 text goes here
                     </p>
-                    <p id= "answer3" class= "answer text-center padding max-width">
-                        Answer3 text goes here</p>
-                    <p id= "answer4" class= "answer text-center padding max-width">
-                        Answer4 text goes here</p>
+                    <p id="answer3" class="answer text-center padding max-width">
+                        Answer3 text goes here
+                    </p>
+                    <p id="answer4" class="answer text-center padding max-width">
+                        Answer4 text goes here
+                    </p>
                 </section>
-                <section id= "point-tracker" class = "max-width flex-center">
-                    <div id= " "></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <!-- Next Question button -->
+                <section id="quiz-nav" class="flex-center padding text-center margin navy-blue">
+                    <div id= "next-button" class="text-center padding" style="color: white;"> Next</div>
+                </section>
+                <!-- Point Tracker -->
+                <section id= "point-tracker" class="max-width flex-center">
+                    <div id="score-number-one" class="circle"></div>
+                    <div id="score-number-two" class="circle"></div>
+                    <div id="score-number-three" class="circle"></div>
+                    <div id="score-number-four" class="circle"></div>
+                    <div id="score-number-five" class="circle"></div>
+                    <div id="score-number-six" class="circle"></div>
+                    <div id="score-number-seven" class="circle"></div>
+                    <div id="score-number-eight" class="circle"></div>
+                    <div id="score-number-nine" class="circle"></div>
+                    <div id="score-number-ten" class="circle"></div>
+                </section>
+                <!--Results section-->
+                <section id="end-results" class="end-results flex-column flex-center max-width">
+                    <h2>Results:</h2>
+                    <h3>You have scored...</h3>
+                    <h2 id="score-results" class="forest-green">Score Results:</h2>
+                    <p id="player-feedback">Player Feedback</p>
+                    <h3 id="home-page" class="light-blue"><a href="index.html"><i class="fa-solid fa-arrow-right fa-beat"></i>
+                        Try again?<i class="fa-solid fa-arrow-left fa-beat"></i></a></h3>
                 </section>
         </section>    
     </main>
-                <!--
-                <div class="score-area">
-                    <p class="scores">Correct Answers</p> <span id="score">0</span>
-                    <p class="scores">Incorrect Answers</p> <span id="incorrect">0</span>
-                </div>-->
-    
+    <!-- Footer section -->
     <footer id="footer" class="width">
         <p>Follow me for more:</p>
-        <a class= "social" href="https://github.com/leebri101" target="_blank" rel="noopener"
+        <a class="social" href="https://github.com/leebri101" target="_blank" rel="noopener"
             aria-label="Please visit my Github page (opens in new tab)">
             <i class="fa-brands fa-github fa-2xl"></i>
         </a>
     </footer>
-
-
-
-
     <!-- Script Files -->
     <script src="https://kit.fontawesome.com/0c878fb726.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
