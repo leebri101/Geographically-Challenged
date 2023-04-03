@@ -241,7 +241,6 @@ section p {
     background-color: rgba(var(--color-five), 0.85);
     color: #fff;
     text-transform: uppercase;
-    font-weight: bold;
     font-size: 1.2em;
     text-align: center;
     padding: 0.25em 0.5em; 
@@ -288,6 +287,7 @@ section p {
     background-color: rgb(var(--color-seven));
 }
 
+
 /* Question tracker and timmer */
 .quiz-tracker{
     display: inline-flex;
@@ -297,6 +297,20 @@ section p {
     background-color: rgba(var(--color-one), 0.85);
 }
 
+#total-time{
+    width: 5px;
+    height: 1em; 
+    border: 2px solid rgba(var(--color-three), 0.85);
+    background: white;
+    overflow: hidden;
+}
+
+#time-remaining{
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    background-color: rgb(var(--color-four));
+}
 
 
 /* Feedback to users during game */
