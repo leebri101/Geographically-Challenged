@@ -56,11 +56,50 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
 }
 
 
+ function formQuizQuestion(questionID){
+  let currentQuestionNum = document.getElementById("current-question");
+  let totalQuestions = document.getElementById("total-questions");
+  currentQuestionNum.innerHTML = questionCount + 1;
+  totalQuestions.innerHTML = quizLength;
+  question.innerHTML = quizQuestions[questionID].questionText;
+  optionOne.innerHTML = quizQuestions[questionID].option[0];
+  optionTwo.innerHTML = quizQuestions[questionID].option[1];
+  optionThree.innerHTML = quizQuestions[questionID].option[2];
+  optionFour.innerHTML = quizQuestions[questionID].option[3];
+ }
+
+ function nextQuestion(){
+  
+
+ }
+
+function timeRemaining(){
+  const counter = document.getElementById("counter")
+  let timer
+}
+
+ function countDown(){
+  timeRemaining = 25;
+  timer =setInterval(function () {
+    countdown(timeRemaining);
+   }, 1000);
+  }
+
+  function countdown(seconds){
+    if (seconds === 0) {
+      counter.innerHTML = `0`;
+      nextQuestion();
+    } else{
+
+    }
+  }
+  
+  
+
+
 /* "Fisher Yates" method is used to shuffle quiz questions in any given order.
-* 
 * Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
 */
-
 function shuffle(array) {
     let m = array.length, t, i;
 
