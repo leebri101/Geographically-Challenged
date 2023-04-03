@@ -19,8 +19,8 @@ const optionOne = document.getElementById("answer1");
 const optionTwo = document.getElementById("answer2");
 const optionThree = document.getElementById("answer3");
 const optionFour = document.getElementById("answer4");
-const timeRemaining = document.getElementById("time-remaining")
-
+const timeLeftBar = document.getElementById("time-remaining");
+const resultsSection = document.getElementById("end-results");
 
 function startNewGame(){
     landingSection.style.display = "none";
@@ -56,7 +56,7 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
 }
 
 
- function formQuizQuestion(questionID){
+function formQuizQuestion(questionID){
   let currentQuestionNum = document.getElementById("current-question");
   let totalQuestions = document.getElementById("total-questions");
   currentQuestionNum.innerHTML = questionCount + 1;
@@ -66,36 +66,59 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
   optionTwo.innerHTML = quizQuestions[questionID].option[1];
   optionThree.innerHTML = quizQuestions[questionID].option[2];
   optionFour.innerHTML = quizQuestions[questionID].option[3];
- }
-
- function nextQuestion(){
+}
+function nextQuestion(){
   
 
- }
-
-function timeRemaining(){
-  const counter = document.getElementById("counter")
-  let timer
 }
 
- function countDown(){
-  timeRemaining = 25;
+let timeLeft;
+  const counter = document.getElementById("counter")
+  let timer;
+
+
+function countDown(){
+  timeLeft = 20;
   timer =setInterval(function () {
-    countdown(timeRemaining);
-   }, 1000);
-  }
+    countdown(timeLeft);
+  }, 1000);
+}
 
-  function countdown(seconds){
+/*
+ * On each major interval of the timer
+ * evaluate if the timer has not reached zero.
+ * If it does move to the next question and make sure the counter says 0.
+ * If the time still remains, then remove 1 second each time from time counter ,
+ * to decrease width of time bar to show the new number.
+ */
+function countdown(seconds){
     if (seconds === 0) {
-      counter.innerHTML = `0`;
-      nextQuestion();
+    counter.innerHTML = `0`;
+    nextQuestion();
     } else{
-
+    timeLeftLength = timeLeftLength - (100/ 20);
+    timeLeft -= 1;
+    counter.innerHTML = timeLeft; 
+    timeLeftBar.style.width = timeLeftBar + "%";
+    if(timeLeft >= 20){
+      timeLeftBar.style.backgroundColor = "green";
+    }else if (timeLeft <= 10){
+      timeLeftBar.style.backgroundColor = "red";
+    } else {
+      timeLeftBar.style.backgroundColor = "amber";
     }
   }
+}
   
-  
+let timeLeftLength = 100; 
 
+function resetTime (){
+  counter.innerHTML =`20`;
+  timeLeftLength = 100;
+  timeLeftBar.style.width = "100%";
+  timeLeftBar.style.backgroundColor ="green";
+  clearInterval(timer);
+}
 
 /* "Fisher Yates" method is used to shuffle quiz questions in any given order.
 * Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
@@ -123,7 +146,16 @@ function countDown(){}
 
 function endOfQuiz(){
     footerSection.style.display = "block";
-    quizSection.style.display = "none"
+    headerSection.style.display = "block";
+    quizSection.style.display = "none";
+    resultsSection.style.display = "inline-flex";
+    playerResults();
+}
+
+function playerResults(){
+  const scoreResults = document.querySelector("#score-results");
+  let scoreOutput = `${correctNum} / ${questionCount}`;
+  scoreResults = scoreOutput
 }
 
 /*
