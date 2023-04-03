@@ -1,6 +1,7 @@
 /* jshint esversion: 8 */
 
 // variables 
+let yaynay = "not-answered";
 const quizLength = 10;
 let correctNum = 0;
 let questionCount = 0;
@@ -12,16 +13,18 @@ const newGameSection = document.getElementById("start-game");
 const playerName = document.getElementById("player-name");
 const startQuizBtn = document.getElementById("start-quiz-btn");
 const leaveQuizBtn = document.getElementById("leave-quiz-btn");
+const nextButton = document.getElementById("next-button");
 const quizSection = document.getElementById("quiz");
 const question = document.getElementById("question-box");
-const answerBox = document.getElementById("answer-box");
-const optionOne = document.getElementById("answer1");
-const optionTwo = document.getElementById("answer2");
-const optionThree = document.getElementById("answer3");
-const optionFour = document.getElementById("answer4");
+const optionOne = document.getElementById("option1");
+const optionTwo = document.getElementById("option2");
+const optionThree = document.getElementById("option3");
+const optionFour = document.getElementById("option4");
 const timeLeftBar = document.getElementById("time-remaining");
 const resultsSection = document.getElementById("end-results");
-const answerOptions = document.querySelectorAll(".answer");
+const answerOptions = answerBox.querySelectorAll(".answer");
+const answerBox = document.getElementById("answer-box");
+
 
 function startNewGame(){
     landingSection.style.display = "none";
@@ -70,14 +73,14 @@ function formQuizQuestion(questionID){
   currentQuestionNum.innerHTML = questionCount + 1;
   totalQuestions.innerHTML = quizLength;
   question.innerHTML = quizQuestions[questionID].questionText;
-  optionOne.innerHTML = quizQuestions[questionID].option[0];
-  optionTwo.innerHTML = quizQuestions[questionID].option[1];
-  optionThree.innerHTML = quizQuestions[questionID].option[2];
-  optionFour.innerHTML = quizQuestions[questionID].option[3];
+  optionOne.innerHTML = quizQuestions[questionID].options[0];
+  optionTwo.innerHTML = quizQuestions[questionID].options[1];
+  optionThree.innerHTML = quizQuestions[questionID].options[2];
+  optionFour.innerHTML = quizQuestions[questionID].options[3];
 }
-function resetAnswers(){
-  for(let answers of answerOptions){
-    answers.setAttribute("class", ".answers")
+function resetAnswersStyles(){
+  for(let options of answerOptions){
+    options.setAttribute("class", ".answers")
   }
 }
 
@@ -86,7 +89,7 @@ for (let answers of answerOptions){
 }
 
 function answerChoices(event){
-  resetAnswersStyle();
+  resetAnswersStyles();
   this.setAttribute("class", "answers-selected");
   let targetID = event.target.id;
   evaluateAnswers(targetID);
@@ -96,13 +99,48 @@ function evaluateAnswers(targetID){
   let playerAnswer = document.getElementById(targetID).innerText;
   let correctAnswer = quizQuestions[questionCount].correctAns;
 
-  if (correctAnswer === playerAnswer)
+  if (correctAnswer === playerAnswer){
+    correctNum++;
+    yaynay = "correct";
+  }else {
+    yaynay = "incorrect";
+  }
+}
+
+function scoreTracker(){
+  let trackerColor;
+  switch(yaynay){
+    case "correct":
+      trackerColor = "forest-green";
+      break;
+    case "incorrect":
+      trackerColor = "red";
+      break;
+    case undefined:
+    case null:
+    case "not-answered":
+      trackerColor = "gray"
+      break;
+  }
+document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
+yaynay = "not-answered";
 }
 
 function nextQuestion(){
-  resetAnswer()
-
+  resetAnswersStyles();
+  resetTime();
+  questionCount += 1;
+  scoreTracker();
+  if (questionCount < quizLength){
+    formQuizQuestion(questionCount);
+    countDown();
+    progressBar();
+  } else {
+    counter.innerHTML = ``;
+    endOfQuiz();
+  }
 }
+nextButton.addEventListener("click", nextQuestion);
 
 let timeLeft;
   const counter = document.getElementById("counter")
@@ -132,7 +170,7 @@ function countdown(seconds){
     timeLeft -= 1;
     counter.innerHTML = timeLeft; 
     timeLeftBar.style.width = timeLeftBar + "%";
-    if(timeLeft >= 50){
+    if(timeLeft >= 20){
       timeLeftBar.style.backgroundColor = "green";
     }else if (timeLeft <= 10){
       timeLeftBar.style.backgroundColor = "red";
@@ -174,8 +212,6 @@ function shuffle(array) {
   }
 
 
-function countDown(){}
-
 function endOfQuiz(){
     footerSection.style.display = "block";
     headerSection.style.display = "block";
@@ -188,4 +224,18 @@ function playerResults(){
   const scoreResults = document.querySelector("#score-results");
   let scoreOutput = `${correctNum} / ${questionCount}`;
   scoreResults.innerHTML = scoreOutput
+
+  const playerFeedback = document.querySelector("#player-feedback");
+  let player = playerName.value;
+  if (correctNum <= 2){
+    playerFeedback = `You're not from around here are you ${player}???`;
+  }else if (correctNum <= 6){
+    playerFeedback = `Beleaf in your self ${player}`;
+  }else if (correctNum <= 8){
+    playerFeedback = `${player} Haters gonna hate, Equators gonna equate.`
+  }else if (correctNum < 10){
+    playerFeedback = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`
+  }else if (correctNum >= 10){
+    playerFeedback =`Man ${player}, you are definitely out of this world!`
+  }
 }
