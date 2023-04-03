@@ -55,6 +55,13 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
   }
 }
 
+// Left click & Enter event listeners to start the quiz
+startQuizBtn.addEventListener("click", startQuiz);
+playerName.addEventListener("keypress", function (e){
+  if (e.key === "Enter") {
+    startQuiz();
+  }
+});
 
 function formQuizQuestion(questionID){
   let currentQuestionNum = document.getElementById("current-question");
@@ -68,7 +75,7 @@ function formQuizQuestion(questionID){
   optionFour.innerHTML = quizQuestions[questionID].option[3];
 }
 function nextQuestion(){
-  
+  resetAnswer()
 
 }
 
@@ -78,7 +85,7 @@ let timeLeft;
 
 
 function countDown(){
-  timeLeft = 20;
+  timeLeft = 50;
   timer =setInterval(function () {
     countdown(timeLeft);
   }, 1000);
@@ -96,11 +103,11 @@ function countdown(seconds){
     counter.innerHTML = `0`;
     nextQuestion();
     } else{
-    timeLeftLength = timeLeftLength - (100/ 20);
+    timeLeftLength = timeLeftLength - (100/ 50);
     timeLeft -= 1;
     counter.innerHTML = timeLeft; 
     timeLeftBar.style.width = timeLeftBar + "%";
-    if(timeLeft >= 20){
+    if(timeLeft >= 50){
       timeLeftBar.style.backgroundColor = "green";
     }else if (timeLeft <= 10){
       timeLeftBar.style.backgroundColor = "red";
@@ -113,7 +120,7 @@ function countdown(seconds){
 let timeLeftLength = 100; 
 
 function resetTime (){
-  counter.innerHTML =`20`;
+  counter.innerHTML =`50`;
   timeLeftLength = 100;
   timeLeftBar.style.width = "100%";
   timeLeftBar.style.backgroundColor ="green";
@@ -155,11 +162,5 @@ function endOfQuiz(){
 function playerResults(){
   const scoreResults = document.querySelector("#score-results");
   let scoreOutput = `${correctNum} / ${questionCount}`;
-  scoreResults = scoreOutput
+  scoreResults.innerHTML = scoreOutput
 }
-
-/*
-function checkAnswer(){
-
-}
-*/
