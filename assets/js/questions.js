@@ -41,7 +41,7 @@ choices: [
     "Pacific, Atlantic, Indian, Southern and Arctic",
     "Indian, Artic, Atlantic, Southern, and Pacific"
     ],
-    correctAns: "Pacific, Atlantic, Indian, Southern and the Arctic"
+    correctAns: "Pacific, Atlantic, Indian, Southern & the Arctic"
 },
 {
 questionNum: "5",
