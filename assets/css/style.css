@@ -279,11 +279,16 @@ section p {
 }
 .answers-selected{
     background-color: #fff;
-    background: rgb(var(--color-six));
-    transition: background-color 0.25s ease-out 100ms
+    background: rgba(var(--color-six), 0.85);
+    border-radius: 15px;
+    border: 2px solid rgba(var(--color-six), 0.85);
+    margin: 0.5em 0;
+    width: 100%;
+    padding: 0.5em;
+    transition: background-color 0.25s ease-out 100ms;
     }
       
-    .answers:hover {
+    .answers-selected:hover {
     background-color: rgb(var(--color-seven));
 }
 
@@ -369,7 +374,7 @@ section p {
 
 #end-results::after{
     content: '';
-    inset: 5px;
+    inset: 4px;
     position: absolute;
     background-color: rgb(var(--color-three));
     border-radius: 10px;
