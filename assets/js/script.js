@@ -21,6 +21,7 @@ const optionThree = document.getElementById("answer3");
 const optionFour = document.getElementById("answer4");
 const timeLeftBar = document.getElementById("time-remaining");
 const resultsSection = document.getElementById("end-results");
+const answerOptions = document.querySelectorAll(".answer");
 
 function startNewGame(){
     landingSection.style.display = "none";
@@ -74,6 +75,30 @@ function formQuizQuestion(questionID){
   optionThree.innerHTML = quizQuestions[questionID].option[2];
   optionFour.innerHTML = quizQuestions[questionID].option[3];
 }
+function resetAnswers(){
+  for(let answers of answerOptions){
+    answers.setAttribute("class", ".answers")
+  }
+}
+
+for (let answers of answerOptions){
+  answers.addEventListener("click", answerChoices)
+}
+
+function answerChoices(event){
+  resetAnswersStyle();
+  this.setAttribute("class", "answers-selected");
+  let targetID = event.target.id;
+  evaluateAnswers(targetID);
+}
+
+function evaluateAnswers(targetID){
+  let playerAnswer = document.getElementById(targetID).innerText;
+  let correctAnswer = quizQuestions[questionCount].correctAns;
+
+  if (correctAnswer === playerAnswer)
+}
+
 function nextQuestion(){
   resetAnswer()
 
