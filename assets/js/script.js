@@ -171,10 +171,10 @@ function countdown(seconds){
     counter.innerHTML = timeLeft; 
     timeLeftBar.style.width = timeLeftBar + "%";
     if(timeLeft >= 20){
-      timeLeftBar.style.backgroundColor = "green";
+      timeLeftBar.style.backgroundColor = "forest-green";
     }else if (timeLeft <= 10){
       timeLeftBar.style.backgroundColor = "red";
-    } else {
+    }else {
       timeLeftBar.style.backgroundColor = "amber";
     }
   }
