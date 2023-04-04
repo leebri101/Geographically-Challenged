@@ -240,7 +240,7 @@ section p {
 
 #question-box {
   background-color: rgba(var(--color-five), 0.85);
-  border: 3px solid rgba(var(--color-three));
+  border: 2px solid rgba(var(--color-three));
   color: #fff;
   display: inline-flex;
   width: 80vw;
@@ -254,40 +254,35 @@ section p {
 
 .answer {
   background-color: white;
-  font-weight: bolder;
   color: black;
-  border: 3px solid rgb(var(--color-seven));
+  border: 3px solid rgb(var(--color-one));
   border-radius: 15px;
-  border: 3px solid rgb(var(--color-seven));
+  border: 3px solid rgb(var(--color-one));
   margin: 0.5em 0;
   width: 100%;
   padding: 0.5em;
+  font-weight: bold;
 }
 
 .answer-selected {
-  background-color: rgba(var(--color-seven), 0.85);
-  font-weight: bolder;
+  background-color: rgba(var(--color-three), 0.85);
   color: white;
-  border: 3px solid rgba(var(--color-seven));
+  border: 3px solid rgba(var(--color-one), 0.85);
   border-radius: 15px;
   margin: 0.5em 0;
   width: 100%;
   padding: 0.5em;
+  font-weight: bold;
 }
-
-.answer-selected:hover {
-  background-color: rgb(var(--color-seven));
-  background: rgba(var(--color-six), 0.85);
-}
-
 
 #quiz-nav {
   display: inline-flex;
 }
 
 #next-button {
-  background-color: rgb(var(--color-two), 0.80);
-  font-size: 1.2em;
+  background-color: #fff;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 
@@ -296,12 +291,12 @@ section p {
   display: inline-flex;
   justify-content: space-around;
   width: 80vw;
-  margin: 2.20em 0;
+  margin: 2.25em 0;
   background-color: rgba(var(--color-one), 0.85);
 }
 
 #total-time {
-  width: 5px;
+  width: 30%;
   height: 1em;
   border: 2px solid rgba(var(--color-three), 0.85);
   background: white;
@@ -312,8 +307,8 @@ section p {
   width: 100%;
   height: 100%;
   text-align: right;
-  background-color: rgb(var(--color-four));
-  transition: all 0.25s ease-in-out;
+  background-color: green;
+  transition: all 0.5s ease-in-out;
 }
 
 
@@ -348,7 +343,7 @@ section p {
   border-radius: 10px;
 }
 
-#end-results {
+#end-results>* {
   z-index: 1;
 }
 
