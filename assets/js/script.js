@@ -1,7 +1,7 @@
 /* jshint esversion: 8 */
 
 // variables 
-let yaynay = "not-answered";
+let yaynay = "unanswered";
 const quizLength = 10;
 let correctNum = 0;
 let questionCount = 0;
@@ -13,32 +13,287 @@ const newGameSection = document.getElementById("start-game");
 const playerName = document.getElementById("player-name");
 const startQuizBtn = document.getElementById("start-quiz-btn");
 const leaveQuizBtn = document.getElementById("leave-quiz-btn");
-const nextButton = document.getElementById("next-button");
+const nextButton = document.getElementById("next-btn");
 const quizSection = document.getElementById("quiz");
 const question = document.getElementById("question-box");
-const optionOne = document.getElementById("option1");
-const optionTwo = document.getElementById("option2");
-const optionThree = document.getElementById("option3");
-const optionFour = document.getElementById("option4");
+const answerOne = document.getElementById("answer1");
+const answerTwo = document.getElementById("answer2");
+const answerThree = document.getElementById("answer3");
+const answerFour = document.getElementById("answer4");
 const timeLeftBar = document.getElementById("time-remaining");
 const resultsSection = document.getElementById("end-results");
-const answerOptions = answerBox.querySelectorAll(".answer");
 const answerBox = document.getElementById("answer-box");
+const answerOptions = answerBox.querySelectorAll(".answer");
 
-
-function startNewGame(){
-    landingSection.style.display = "none";
-    newGameSection.style.display = "inline-flex";
-    playerName.focus();
+const quizQuestions = [{
+  questionNum: "1",
+  questionText: "Ninety percent of the Earth's population lives in which hemisphere?",
+  choices: [
+    "The Northern Hemisphere",
+    "The Southern Hemisphere",
+    "The Eastern Hemisphere",
+    "The Western Hemisphere"
+  ],
+  correctAns: "The Northern Hemisphere"
+},
+{
+  questionNum: "2",
+  questionText: "How many time zones does Australia have?",
+  choices: [
+    "6",
+    "5",
+    "4",
+    "3"
+  ],
+  correctAns: "3"
+},
+{
+  questionNum: "3",
+  questionText: "Which continent is in all four hemispheres?",
+  choices: [
+    "Africa",
+    "South America",
+    "Asia",
+    "Europe"
+  ],
+  correctAns: "Africa"
+},
+{
+  questionNum: "4",
+  questionText: "What is the order of the largest oceans on Earth?",
+  choices: [
+    "Atlantic, Pacific, Indian, Arctic, and Southern",
+    "Arctic, Southern, Indian, Atlantic and Pacific",
+    "Pacific, Atlantic, Indian, Southern and Arctic",
+    "Indian, Artic, Atlantic, Southern, and Pacific"
+  ],
+  correctAns: "Pacific, Atlantic, Indian, Southern & the Arctic"
+},
+{
+  questionNum: "5",
+  questionText: "Where is the world's largest desert located?",
+  choices: [
+    "Arctic Desert",
+    "Sahara Desert",
+    "Arabian Desert",
+    "Antarctic Desert"
+  ],
+  correctAns: "Antarctic Desert"
+},
+{
+  questionNum: "6",
+  questionText: "What is the capital city of Spain?",
+  choices: [
+    "Madrid",
+    "Valencia",
+    "Barcelona",
+    "Seville "
+  ],
+  correctAns: "Madrid"
+},
+{
+  questionNum: "7",
+  questionText: "What is the capital city of Australia?",
+  choices: [
+    "Canberra",
+    "Sydney",
+    "Melbourne",
+    "Brisbane"
+  ],
+  correctAns: "Canberra"
+},
+{
+  questionNum: "8",
+  questionText: "What is the capital city of South Korea",
+  choices: [
+    "Busan",
+    "Incheon",
+    "Seoul",
+    "Daegu"
+  ],
+  correctAns: "Seoul"
+},
+{
+  questionNum: "9",
+  questionText: "What is the capital city of New Zealand?",
+  choices: [
+    "Wellington",
+    "Auckland",
+    "Christchurch",
+    "Dunedin"
+  ],
+  correctAns: "Wellington"
+},
+{
+  questionNum: "10",
+  questionText: "What country has the largest population in the world?",
+  choices: [
+    "China",
+    "The United States",
+    "Indonesia",
+    "India"
+  ],
+  correctAns: "China"
+},
+{
+  questionNum: "11",
+  questionText: "",
+  choices: [
+    "Monaco",
+    "Nauru",
+    "Macau",
+    "Vatican City"
+  ],
+  correctAns: "Vatican City"
+},
+{
+  questionNum: "12",
+  questionText: "What is the largest ocean in the world?",
+  choices: [
+    "Atlantic Ocean",
+    "Artic Ocean",
+    "Indian Ocean",
+    "Pacfic Ocean"
+  ],
+  correctAns: "Pacfic Ocean"
+},
+{
+  questionNum: "13",
+  questionText: "Which city in the Philippines is the most densely populated?",
+  choices: [
+    "Caloocan",
+    "Manila",
+    "Pateros",
+    "Mandaluyong"
+  ],
+  correctAns: "Manila"
+},
+{
+  questionNum: "14",
+  questionText: "",
+  choices: [
+    "Mount Fuji",
+    "Popocatépetl",
+    "Mauna Loa",
+    "Kilimanjaro"
+  ],
+  correctAns: "Mauna Loa located in Hawaii"
+},
+{
+  questionNum: "15",
+  questionText: "What is the name of China's largest river?",
+  choices: [
+    "The Yangshe River",
+    "The Yangsea River",
+    "The Yangtze River",
+    "The YangZee River"
+  ],
+  correctAns: "The Yangtze River"
+},
+{
+  questionNum: "16",
+  questionText: "What is the tallest moutain the UK?",
+  choices: [
+    "Carn Eige",
+    "Snowdon",
+    "Carrauntoohil",
+    "Ben Nevis"
+  ],
+  correctAns: "Ben Nevis"
+},
+{
+  questionNum: "17",
+  questionText: "How many States does the United States consist of?",
+  choices: [
+    "50",
+    "52",
+    "49",
+    "48"
+  ],
+  correctAns: "50"
+},
+{
+  questionNum: "18",
+  questionText: "How many countries are there in the United Kingdom?",
+  choices: [
+    "4",
+    "5",
+    "3",
+    "2"
+  ],
+  correctAns: ""
+},
+{
+  questionNum: "19",
+  questionText: "How many time zones does Russia have?",
+  choices: [
+    "11",
+    "13",
+    "10",
+    "A lot"
+  ],
+  correctAns: "11"
+},
+{
+  questionNum: "20",
+  questionText: "What is the name of the largest city in Australia?",
+  choices: [
+    "Brisbane",
+    "Sydney",
+    "Melbourne",
+    "Perth"
+  ],
+  correctAns: "Brisbane"
+},
+{
+  questionNum: "21",
+  questionText: "What country is known to have the best quality tap water?",
+  choices: [
+    "France",
+    "Switzerland",
+    "Norway",
+    "Luxembourg"
+  ],
+  correctAns: "Switzerland"
+},
+{
+  questionNum: "23",
+  questionText: "In what ocean is the Bermuda Triangle located?",
+  choices: [
+    "Pacific Ocean",
+    "Indian Ocean",
+    "Atlantic Ocean",
+    "Arctic Ocean"
+  ],
+  correctAns: "Atlantic Ocean"
+},
+{
+  questionNum: "24",
+  questionText: "The Grand Canyon is located in which US state?",
+  choices: [
+    "Florida",
+    "Texas",
+    "Arizona",
+    "Mississippi"
+  ],
+  correctAns: "Arizona"
 }
+];
 
+
+function startNewGame() {
+  landingSection.style.display = "none";
+  newGameSection.style.display = "inline-flex";
+  playerName.focus();
+}
+    
 playButton.addEventListener("click", startNewGame);
 
 // Start game section
-function leaveQuiz(){
-    playerName.value = "";
-    landingSection.style.display = "inline-flex";;
-    newGameSection.style.display = "none";
+function leaveQuiz() {
+  playerName.value = "";
+  landingSection.style.display = "inline-flex";
+  newGameSection.style.display = "none";
 }
 
 leaveQuizBtn.addEventListener("click", leaveQuiz);
@@ -53,7 +308,7 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
     headerSection.style.display = "none";
     footerSection.style.display = "none";
     shuffle(quizQuestions);
-    formQuizQuestion(questionCount);
+    buildQuizQuestion(questionCount);
     progressBar(questionCount);
     countDown();
   }
@@ -67,35 +322,36 @@ playerName.addEventListener("keypress", function (e){
   }
 });
 
-function formQuizQuestion(questionID){
+function buildQuizQuestion(questionID){
   let currentQuestionNum = document.getElementById("current-question");
   let totalQuestions = document.getElementById("total-questions");
   currentQuestionNum.innerHTML = questionCount + 1;
   totalQuestions.innerHTML = quizLength;
   question.innerHTML = quizQuestions[questionID].questionText;
-  optionOne.innerHTML = quizQuestions[questionID].options[0];
-  optionTwo.innerHTML = quizQuestions[questionID].options[1];
-  optionThree.innerHTML = quizQuestions[questionID].options[2];
-  optionFour.innerHTML = quizQuestions[questionID].options[3];
+  answerOne.innerHTML = quizQuestions[questionID].answers[0];
+  console.log(answerOne.innerHTML = quizQuestions[questionID].answers[0]);
+  answerTwo.innerHTML = quizQuestions[questionID].answers[1];
+  answerThree.innerHTML = quizQuestions[questionID].answers[2];
+  answerFour.innerHTML = quizQuestions[questionID].answers[3];
 }
 function resetAnswersStyles(){
-  for(let options of answerOptions){
-    options.setAttribute("class", ".answers")
+  for(let answer of answerOptions){
+    answer.setAttribute("class", ".answer")
   }
 }
 
-for (let answers of answerOptions){
-  answers.addEventListener("click", answerChoices)
+for (let answer of answerOptions){
+  answer.addEventListener("click", answerChoice)
 }
 
-function answerChoices(event){
+function answerChoice(event){
   resetAnswersStyles();
-  this.setAttribute("class", "answers-selected");
+  this.setAttribute("class", "answer-selected");
   let targetID = event.target.id;
-  evaluateAnswers(targetID);
+  evaluateAnswer(targetID);
 }
 
-function evaluateAnswers(targetID){
+function evaluateAnswer(targetID){
   let playerAnswer = document.getElementById(targetID).innerText;
   let correctAnswer = quizQuestions[questionCount].correctAns;
 
@@ -118,12 +374,12 @@ function scoreTracker(){
       break;
     case undefined:
     case null:
-    case "not-answered":
+    case "unanswered":
       trackerColor = "gray"
       break;
   }
 document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
-yaynay = "not-answered";
+yaynay = "unanswered";
 }
 
 function nextQuestion(){
@@ -132,9 +388,9 @@ function nextQuestion(){
   questionCount += 1;
   scoreTracker();
   if (questionCount < quizLength){
-    formQuizQuestion(questionCount);
+    buildQuizQuestion(questionCount);
     countDown();
-    progressBar();
+    progressBar(questionCount);
   } else {
     counter.innerHTML = ``;
     endOfQuiz();
@@ -142,13 +398,13 @@ function nextQuestion(){
 }
 nextButton.addEventListener("click", nextQuestion);
 
+
 let timeLeft;
   const counter = document.getElementById("counter")
   let timer;
 
-
 function countDown(){
-  timeLeft = 50;
+  timeLeft = 30;
   timer =setInterval(function () {
     countdown(timeLeft);
   }, 1000);
@@ -166,12 +422,12 @@ function countdown(seconds){
     counter.innerHTML = `0`;
     nextQuestion();
     } else{
-    timeLeftLength = timeLeftLength - (100/ 50);
+    timeLeftWidth = timeLeftWidth - (100/ 30);
     timeLeft -= 1;
     counter.innerHTML = timeLeft; 
     timeLeftBar.style.width = timeLeftBar + "%";
     if(timeLeft >= 20){
-      timeLeftBar.style.backgroundColor = "forest-green";
+      timeLeftBar.style.backgroundColor = "green";
     }else if (timeLeft <= 10){
       timeLeftBar.style.backgroundColor = "red";
     }else {
@@ -180,11 +436,11 @@ function countdown(seconds){
   }
 }
   
-let timeLeftLength = 100; 
+let timeLeftWidth= 100; 
 
 function resetTime (){
-  counter.innerHTML =`50`;
-  timeLeftLength = 100;
+  counter.innerHTML =`30`;
+  timeLeftWidth = 100;
   timeLeftBar.style.width = "100%";
   timeLeftBar.style.backgroundColor ="green";
   clearInterval(timer);
@@ -208,8 +464,8 @@ function shuffle(array) {
       array[i] = t;
     }
   
-    return array;
-  }
+  return array;
+}questionCount
 
 
 function endOfQuiz(){
@@ -228,14 +484,17 @@ function playerResults(){
   const playerFeedback = document.querySelector("#player-feedback");
   let player = playerName.value;
   if (correctNum <= 2){
-    playerFeedback = `You're not from around here are you ${player}???`;
+    playerFeedback.innerHTML = `You're not from around here are you ${player}???`;
   }else if (correctNum <= 6){
-    playerFeedback = `Beleaf in your self ${player}`;
+    playerFeedback.innerHTML = `Beleaf in your self ${player}`;
   }else if (correctNum <= 8){
-    playerFeedback = `${player} Haters gonna hate, Equators gonna equate.`
+    playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`
   }else if (correctNum < 10){
-    playerFeedback = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`
+    playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`
   }else if (correctNum >= 10){
-    playerFeedback =`Man ${player}, you are definitely out of this world!`
+    playerFeedback.innerHTML =`Man ${player}, you are definitely out of this world!`
   }
 }
+
+/* quiz questions */
+
