@@ -112,7 +112,7 @@ const quizQuestions = [{
   },
   {
     questionNum: "11",
-    questionText: "",
+    questionText: "Which is the smallest country in the world?",
     choices: [
       "Monaco",
       "Nauru",
@@ -145,7 +145,7 @@ const quizQuestions = [{
   },
   {
     questionNum: "14",
-    questionText: "",
+    questionText: "Which one is the largest volcano?",
     choices: [
       "Mount Fuji",
       "Popocatépetl",
