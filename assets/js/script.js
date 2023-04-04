@@ -20,265 +20,10 @@ const choiceOne = document.getElementById("answer1");
 const choiceTwo = document.getElementById("answer2");
 const choiceThree = document.getElementById("answer3");
 const choiceFour = document.getElementById("answer4");
-const timeLeftBar = document.getElementById("time-remaining");
+const timeLeftBar = document.getElementById("time-left");
 const resultsSection = document.getElementById("results");
 const answerBox = document.getElementById("answer-box");
 const answerOptions = answerBox.querySelectorAll(".answer");
-
-const quizQuestions = [{
-  questionNum: "1",
-  questionText: "Ninety percent of the Earth's population lives in which hemisphere?",
-  choices: [
-    "The Northern Hemisphere",
-    "The Southern Hemisphere",
-    "The Eastern Hemisphere",
-    "The Western Hemisphere"
-  ],
-  correctAns: "The Northern Hemisphere"
-},
-{
-  questionNum: "2",
-  questionText: "How many time zones does Australia have?",
-  choices: [
-    "6",
-    "5",
-    "4",
-    "3"
-  ],
-  correctAns: "3"
-},
-{
-  questionNum: "3",
-  questionText: "Which continent is in all four hemispheres?",
-  choices: [
-    "Africa",
-    "South America",
-    "Asia",
-    "Europe"
-  ],
-  correctAns: "Africa"
-},
-{
-  questionNum: "4",
-  questionText: "What is the order of the largest oceans on Earth?",
-  choices: [
-    "Atlantic, Pacific, Indian, Arctic, and Southern",
-    "Arctic, Southern, Indian, Atlantic and Pacific",
-    "Pacific, Atlantic, Indian, Southern and Arctic",
-    "Indian, Artic, Atlantic, Southern, and Pacific"
-  ],
-  correctAns: "Pacific, Atlantic, Indian, Southern & the Arctic"
-},
-{
-  questionNum: "5",
-  questionText: "Where is the world's largest desert located?",
-  choices: [
-    "Arctic Desert",
-    "Sahara Desert",
-    "Arabian Desert",
-    "Antarctic Desert"
-  ],
-  correctAns: "Antarctic Desert"
-},
-{
-  questionNum: "6",
-  questionText: "What is the capital city of Spain?",
-  choices: [
-    "Madrid",
-    "Valencia",
-    "Barcelona",
-    "Seville "
-  ],
-  correctAns: "Madrid"
-},
-{
-  questionNum: "7",
-  questionText: "What is the capital city of Australia?",
-  choices: [
-    "Canberra",
-    "Sydney",
-    "Melbourne",
-    "Brisbane"
-  ],
-  correctAns: "Canberra"
-},
-{
-  questionNum: "8",
-  questionText: "What is the capital city of South Korea",
-  choices: [
-    "Busan",
-    "Incheon",
-    "Seoul",
-    "Daegu"
-  ],
-  correctAns: "Seoul"
-},
-{
-  questionNum: "9",
-  questionText: "What is the capital city of New Zealand?",
-  choices: [
-    "Wellington",
-    "Auckland",
-    "Christchurch",
-    "Dunedin"
-  ],
-  correctAns: "Wellington"
-},
-{
-  questionNum: "10",
-  questionText: "What country has the largest population in the world?",
-  choices: [
-    "China",
-    "The United States",
-    "Indonesia",
-    "India"
-  ],
-  correctAns: "China"
-},
-{
-  questionNum: "11",
-  questionText: "",
-  choices: [
-    "Monaco",
-    "Nauru",
-    "Macau",
-    "Vatican City"
-  ],
-  correctAns: "Vatican City"
-},
-{
-  questionNum: "12",
-  questionText: "What is the largest ocean in the world?",
-  choices: [
-    "Atlantic Ocean",
-    "Artic Ocean",
-    "Indian Ocean",
-    "Pacfic Ocean"
-  ],
-  correctAns: "Pacfic Ocean"
-},
-{
-  questionNum: "13",
-  questionText: "Which city in the Philippines is the most densely populated?",
-  choices: [
-    "Caloocan",
-    "Manila",
-    "Pateros",
-    "Mandaluyong"
-  ],
-  correctAns: "Manila"
-},
-{
-  questionNum: "14",
-  questionText: "",
-  choices: [
-    "Mount Fuji",
-    "Popocatépetl",
-    "Mauna Loa",
-    "Kilimanjaro"
-  ],
-  correctAns: "Mauna Loa located in Hawaii"
-},
-{
-  questionNum: "15",
-  questionText: "What is the name of China's largest river?",
-  choices: [
-    "The Yangshe River",
-    "The Yangsea River",
-    "The Yangtze River",
-    "The YangZee River"
-  ],
-  correctAns: "The Yangtze River"
-},
-{
-  questionNum: "16",
-  questionText: "What is the tallest moutain the UK?",
-  choices: [
-    "Carn Eige",
-    "Snowdon",
-    "Carrauntoohil",
-    "Ben Nevis"
-  ],
-  correctAns: "Ben Nevis"
-},
-{
-  questionNum: "17",
-  questionText: "How many States does the United States consist of?",
-  choices: [
-    "50",
-    "52",
-    "49",
-    "48"
-  ],
-  correctAns: "50"
-},
-{
-  questionNum: "18",
-  questionText: "How many countries are there in the United Kingdom?",
-  choices: [
-    "4",
-    "5",
-    "3",
-    "2"
-  ],
-  correctAns: ""
-},
-{
-  questionNum: "19",
-  questionText: "How many time zones does Russia have?",
-  choices: [
-    "11",
-    "13",
-    "10",
-    "A lot"
-  ],
-  correctAns: "11"
-},
-{
-  questionNum: "20",
-  questionText: "What is the name of the largest city in Australia?",
-  choices: [
-    "Brisbane",
-    "Sydney",
-    "Melbourne",
-    "Perth"
-  ],
-  correctAns: "Brisbane"
-},
-{
-  questionNum: "21",
-  questionText: "What country is known to have the best quality tap water?",
-  choices: [
-    "France",
-    "Switzerland",
-    "Norway",
-    "Luxembourg"
-  ],
-  correctAns: "Switzerland"
-},
-{
-  questionNum: "23",
-  questionText: "In what ocean is the Bermuda Triangle located?",
-  choices: [
-    "Pacific Ocean",
-    "Indian Ocean",
-    "Atlantic Ocean",
-    "Arctic Ocean"
-  ],
-  correctAns: "Atlantic Ocean"
-},
-{
-  questionNum: "24",
-  questionText: "The Grand Canyon is located in which US state?",
-  choices: [
-    "Florida",
-    "Texas",
-    "Arizona",
-    "Mississippi"
-  ],
-  correctAns: "Arizona"
-}
-];
 
 
 function startNewGame() {
@@ -310,7 +55,7 @@ if (playerName.value == "" || playerName == null || playerName == undefined){
     shuffle(quizQuestions);
     buildQuizQuestion(questionCount);
     progressBar(questionCount);
-    countDown();
+    startTimer();
   }
 }
 
@@ -327,7 +72,7 @@ let timeLeft;
 const counter = document.getElementById("counter")
 let timer;
 
-function countDown(){
+function startTimer(){
   timeLeft = 30;
   timer =setInterval(function () {
     countdown(timeLeft);
@@ -348,23 +93,24 @@ function countdown(seconds){
     timeLeftWidth = timeLeftWidth - (100/ 30);
     timeLeft -= 1;
     counter.innerHTML = timeLeft; 
-    timeLeftBar.style.width = timeLeftBar + "%";
+    timeLeftBar.style.width = timeLeftWidth + "%";
     if(timeLeft >= 20){
       timeLeftBar.style.backgroundColor = "green";
     }else if (timeLeft <= 10){
       timeLeftBar.style.backgroundColor = "red";
     }else {
-      timeLeftBar.style.backgroundColor = "amber";
+      timeLeftBar.style.backgroundColor = "yellow";
     }
   }
 }
+
 let timeLeftWidth= 100; 
 
 function resetTimer (){
   counter.innerHTML =`30`;
   timeLeftWidth = 100;
   timeLeftBar.style.width = "100%";
-  timeLeftBar.style.backgroundColor ="green";
+  timeLeftBar.style.backgroundColor = "green";
   clearInterval(timer);
 }
 
@@ -390,13 +136,13 @@ return array;
 }questionCount
 
 function nextQuestion(){
-  resetAnswersStyles();
+  resetAnswerStyles();
   resetTimer();
   questionCount += 1;
   scoreTracker();
   if (questionCount < quizLength){
     buildQuizQuestion(questionCount);
-    countDown();
+    startTimer();
     progressBar(questionCount);
   } else {
     counter.innerHTML = ``;
@@ -419,7 +165,7 @@ function buildQuizQuestion(questionID){
   choiceFour.innerHTML = quizQuestions[questionID].choices[3];
 }
 
-function resetAnswersStyles(){
+function resetAnswerStyles(){
   for(let answer of answerOptions){
     answer.setAttribute("class", "answer")
   }
@@ -435,7 +181,7 @@ for (let answer of answerOptions){
 }
 
 function choiceAnswer(event){
-  resetAnswersStyles();
+  resetAnswerStyles();
   this.setAttribute("class", "answer-selected");
   let targetID = event.target.id;
   evaluateAnswer(targetID);
@@ -469,7 +215,7 @@ function scoreTracker(){
       break;
   }
   document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
-yaynay = "unanswered";
+  yaynay = "unanswered";
 }
 
 
@@ -482,9 +228,9 @@ function endOfQuiz(){
 }
 
 function playerResults(){
-  const scoreResults = document.querySelector("#score-results");
+  const scoreResult = document.querySelector("#score-result");
   let scoreOutput = `${correctNum} / ${questionCount}`;
-  scoreResults.innerHTML = scoreOutput
+  scoreResult.innerHTML = scoreOutput
 
   const playerFeedback = document.querySelector("#player-feedback");
   let player = playerName.value;
@@ -497,6 +243,6 @@ function playerResults(){
   }else if (correctNum < 10){
     playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`
   }else if (correctNum >= 10){
-    playerFeedback.innerHTML =`Man ${player}, you are definitely out of this world!`
+    playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`
   }
 }
