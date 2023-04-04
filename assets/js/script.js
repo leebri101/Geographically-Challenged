@@ -16,12 +16,12 @@ const leaveQuizBtn = document.getElementById("leave-quiz-btn");
 const nextButton = document.getElementById("next-btn");
 const quizSection = document.getElementById("quiz");
 const question = document.getElementById("question-box");
-const answerOne = document.getElementById("answer1");
-const answerTwo = document.getElementById("answer2");
-const answerThree = document.getElementById("answer3");
-const answerFour = document.getElementById("answer4");
+const choiceOne = document.getElementById("answer1");
+const choiceTwo = document.getElementById("answer2");
+const choiceThree = document.getElementById("answer3");
+const choiceFour = document.getElementById("answer4");
 const timeLeftBar = document.getElementById("time-remaining");
-const resultsSection = document.getElementById("end-results");
+const resultsSection = document.getElementById("results");
 const answerBox = document.getElementById("answer-box");
 const answerOptions = answerBox.querySelectorAll(".answer");
 
@@ -322,86 +322,10 @@ playerName.addEventListener("keypress", function (e){
   }
 });
 
-function buildQuizQuestion(questionID){
-  let currentQuestionNum = document.getElementById("current-question");
-  let totalQuestions = document.getElementById("total-questions");
-  currentQuestionNum.innerHTML = questionCount + 1;
-  totalQuestions.innerHTML = quizLength;
-  question.innerHTML = quizQuestions[questionID].questionText;
-  answerOne.innerHTML = quizQuestions[questionID].answers[0];
-  console.log(answerOne.innerHTML = quizQuestions[questionID].answers[0]);
-  answerTwo.innerHTML = quizQuestions[questionID].answers[1];
-  answerThree.innerHTML = quizQuestions[questionID].answers[2];
-  answerFour.innerHTML = quizQuestions[questionID].answers[3];
-}
-function resetAnswersStyles(){
-  for(let answer of answerOptions){
-    answer.setAttribute("class", ".answer")
-  }
-}
-
-for (let answer of answerOptions){
-  answer.addEventListener("click", answerChoice)
-}
-
-function answerChoice(event){
-  resetAnswersStyles();
-  this.setAttribute("class", "answer-selected");
-  let targetID = event.target.id;
-  evaluateAnswer(targetID);
-}
-
-function evaluateAnswer(targetID){
-  let playerAnswer = document.getElementById(targetID).innerText;
-  let correctAnswer = quizQuestions[questionCount].correctAns;
-
-  if (correctAnswer === playerAnswer){
-    correctNum++;
-    yaynay = "correct";
-  }else {
-    yaynay = "incorrect";
-  }
-}
-
-function scoreTracker(){
-  let trackerColor;
-  switch(yaynay){
-    case "correct":
-      trackerColor = "forest-green";
-      break;
-    case "incorrect":
-      trackerColor = "red";
-      break;
-    case undefined:
-    case null:
-    case "unanswered":
-      trackerColor = "gray"
-      break;
-  }
-document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
-yaynay = "unanswered";
-}
-
-function nextQuestion(){
-  resetAnswersStyles();
-  resetTime();
-  questionCount += 1;
-  scoreTracker();
-  if (questionCount < quizLength){
-    buildQuizQuestion(questionCount);
-    countDown();
-    progressBar(questionCount);
-  } else {
-    counter.innerHTML = ``;
-    endOfQuiz();
-  }
-}
-nextButton.addEventListener("click", nextQuestion);
-
 
 let timeLeft;
-  const counter = document.getElementById("counter")
-  let timer;
+const counter = document.getElementById("counter")
+let timer;
 
 function countDown(){
   timeLeft = 30;
@@ -410,8 +334,7 @@ function countDown(){
   }, 1000);
 }
 
-/*
- * On each major interval of the timer
+/* On each major interval of the timer
  * evaluate if the timer has not reached zero.
  * If it does move to the next question and make sure the counter says 0.
  * If the time still remains, then remove 1 second each time from time counter ,
@@ -435,10 +358,9 @@ function countdown(seconds){
     }
   }
 }
-  
 let timeLeftWidth= 100; 
 
-function resetTime (){
+function resetTimer (){
   counter.innerHTML =`30`;
   timeLeftWidth = 100;
   timeLeftBar.style.width = "100%";
@@ -450,30 +372,113 @@ function resetTime (){
 * Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
 */
 function shuffle(array) {
-    let m = array.length, t, i;
+  let m = array.length, t, i;
 
-    // While there remain elements to shuffle…
-    while (m) {
-  
-      // Pick a remaining element…
-      i = Math.floor(Math.random() * m--);
-  
-      // And swap it with the current element.
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
-    }
-  
-  return array;
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+return array;
 }questionCount
+
+function nextQuestion(){
+  resetAnswersStyles();
+  resetTimer();
+  questionCount += 1;
+  scoreTracker();
+  if (questionCount < quizLength){
+    buildQuizQuestion(questionCount);
+    countDown();
+    progressBar(questionCount);
+  } else {
+    counter.innerHTML = ``;
+    endOfQuiz();
+  }
+}
+
+nextButton.addEventListener("click", nextQuestion);
+
+
+function buildQuizQuestion(questionID){
+  let currentQuestionNum = document.getElementById("current-question");
+  let totalQuestions = document.getElementById("total-questions");
+  currentQuestionNum.innerHTML = questionCount + 1;
+  totalQuestions.innerHTML = quizLength;
+  question.innerHTML = quizQuestions[questionID].questionText;
+  choiceOne.innerHTML = quizQuestions[questionID].choices[0];
+  choiceTwo.innerHTML = quizQuestions[questionID].choices[1];
+  choiceThree.innerHTML = quizQuestions[questionID].choices[2];
+  choiceFour.innerHTML = quizQuestions[questionID].choices[3];
+}
+
+function resetAnswersStyles(){
+  for(let answer of answerOptions){
+    answer.setAttribute("class", "answer")
+  }
+}
+
+function progressBar(questionCount){
+  document.getElementsByClassName("circle")[questionCount]
+  .style.backgroundColor = "yellow";
+}
+
+for (let answer of answerOptions){
+  answer.addEventListener("click", choiceAnswer)
+}
+
+function choiceAnswer(event){
+  resetAnswersStyles();
+  this.setAttribute("class", "answer-selected");
+  let targetID = event.target.id;
+  evaluateAnswer(targetID);
+}
+
+function evaluateAnswer(targetID){
+  let playerAnswer = document.getElementById(targetID).innerText;
+  let correctAnswer = quizQuestions[questionCount].correctAns;
+
+  if (correctAnswer === playerAnswer){
+    correctNum++;
+    yaynay = "correct";
+  }else {
+    yaynay = "incorrect";
+  }
+}
+
+function scoreTracker(){
+  let trackerColor;
+  switch(yaynay){
+    case "correct":
+      trackerColor = "green";
+      break;
+    case "incorrect":
+      trackerColor = "red";
+      break;
+    case undefined:
+    case null:
+    case "unanswered":
+      trackerColor = "gray"
+      break;
+  }
+  document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
+yaynay = "unanswered";
+}
 
 
 function endOfQuiz(){
-    footerSection.style.display = "block";
+  quizSection.style.display = "none";
+  resultsSection.style.display = "inline-flex";  
     headerSection.style.display = "block";
-    quizSection.style.display = "none";
-    resultsSection.style.display = "inline-flex";
-    playerResults();
+    footerSection.style.display = "block";
+  playerResults();
 }
 
 function playerResults(){
@@ -495,6 +500,3 @@ function playerResults(){
     playerFeedback.innerHTML =`Man ${player}, you are definitely out of this world!`
   }
 }
-
-/* quiz questions */
-
