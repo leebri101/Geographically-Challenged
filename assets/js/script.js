@@ -25,6 +25,15 @@ const answerBox = document.getElementById("answer-box");
 const answerOptions = answerBox.querySelectorAll(".answer");
 const timeLeftBar = document.getElementById("time-left");
 
+
+/**
+ * The CSS properties that were used in the script is to hide all sections of the site 
+ * except for the landing page which has a Call To Action (CTA) play button.
+ * Upon selecting the CTA button it hides the landing page and displays the 
+ * new-game page showing a text box which prompts users to enter a name.
+ * It will also allow the user options to either start the quiz or to return back to home page/landing page.
+ * As a feature to add into the near future will be adding a rules section.
+ */
 function startNewGame() {
   landingSection.style.display = "none";
   newGameSection.style.display = "inline-flex";
@@ -42,7 +51,12 @@ function leaveQuiz() {
 
 leaveQuizBtn.addEventListener("click", leaveQuiz);
 
-
+/**
+ * User must click on CTA button to display player name input bar.
+ * If there is no input an errorhandler is in place to prompt the user to input in the name bar.
+ * Once a player name has been inputted, questions are randomised, build and display first question.
+ * It will show the user that they are on the first question which will automatically start the timer.
+ */
 function startQuiz(){;
 if (playerName.value == "" || playerName == null || playerName == undefined){
     playerName.style.borderBlockColor = "red"
@@ -67,10 +81,18 @@ playerName.addEventListener("keypress", function (e){
 });
 
 
+/**
+ * Required time variables
+*/
 let timeLeft;
 const counter = document.getElementById("counter")
 let timer;
 
+/**
+ * Duration for each question 
+ * Every second a loop is in place.
+ * All fucntions within the countdown() fucntion.
+ */
 function startTimer(){
   timeLeft = 30;
   timer = setInterval(function () {
@@ -78,7 +100,8 @@ function startTimer(){
   }, 1000);
 }
 
-/* On each major interval of the timer
+/**
+ * On each major interval of the timer
  * evaluate if the timer has not reached zero.
  * If it does move to the next question and make sure the counter says 0.
  * If the time still remains, then remove 1 second each time from time counter ,
@@ -117,11 +140,13 @@ function resetTimer (){
   clearInterval(timer);
 }
 
-/* "Fisher Yates" method is used to shuffle quiz questions in any given order.
-* Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
+/**
+ * "Fisher Yates" method is used to shuffle quiz questions in any given order.
+ *  Credits go to Mike Bostock. https://bost.ocks.org/mike/shuffle/
 */
 function shuffle(array) {
-  let m = array.length, t, i;
+  let m = array.length, 
+  t, i;
 
   // While there remain elements to shuffle…
   while (m) {
@@ -139,8 +164,8 @@ return array;
 }questionCount
 
 
-/*
- * The nextQuestion() function is th main way to, calling on fucntions to:
+/**
+ * The nextQuestion() function is the main way to, calling on fucntions to:
  * 1. To reset to answer/timer elements to the default values/styles.
  * 2. To allow for paging and moving onto the next question.
  * 3. Manipulating the DOM elements in the score-tracker for players to see the current progress.
@@ -164,7 +189,12 @@ function nextQuestion(){
 
 nextButton.addEventListener("click", nextQuestion);
 
-
+/**
+ * Form current question&answers within the DOM with the shuffled array 
+ * of quizQuestions.
+ * Called only from startQuiz() function for the first question 
+ * or from the nextQuestion() for the rest of the questions.
+ */
 function buildQuizQuestion(questionID){
   let currentQuestionNum = document.getElementById("current-question");
   let totalQuestions = document.getElementById("total-questions");
@@ -177,17 +207,31 @@ function buildQuizQuestion(questionID){
   choiceFour.innerHTML = quizQuestions[questionID].choices[3];
 }
 
+/**
+ * Once called through the loop it will reset to default
+ * for the selected answer elements and for the next question.
+ */
 function resetAnswerStyles(){
   for(let answer of answerOptions){
     answer.setAttribute("class", "answer")
   }
 }
 
+/**
+ * Shows small yellow circle below the page to show the user that they are on the current
+ * question num.
+ */
 function progressBar(questionCount){
   document.getElementsByClassName("circle")[questionCount]
   .style.backgroundColor = "yellow";
 }
 
+/**
+ * Loop for answer buttons with eventlistener.
+ * When triggered, calls the choiceAnswer() function to change the
+ * class of the selected answer.
+ * The class in turn applies css properties to make selection stand out to user.
+*/
 for (let answer of answerOptions){
   answer.addEventListener("click", choiceAnswer)
 }
@@ -232,29 +276,29 @@ function scoreTracker(){
 
 
 function endOfQuiz(){
-  quizSection.style.display = "none";
-  resultsSection.style.display = "inline-flex";  
-    headerSection.style.display = "block";
-    footerSection.style.display = "block";
-  playerResults();
+    quizSection.style.display = "none";
+    resultsSection.style.display = "inline-flex";  
+        headerSection.style.display = "block";
+        footerSection.style.display = "block";
+    playerResults();
 }
 
 function playerResults(){
   const scoreResult = document.querySelector("#score-result");
-  let scoreOutput = `${correctNum} / ${questionCount}`;
-  scoreResult.innerHTML = scoreOutput
+  let resultOutput = `${correctNum} / ${questionCount}`;
+  scoreResult.innerHTML = resultOutput
 
   const playerFeedback = document.querySelector("#player-feedback");
   let player = playerName.value;
   if (correctNum <= 2){
-    playerFeedback.innerHTML = `You're not from around here are you ${player}???`;
+    playerFeedback.innerHTML = `<a href = You're not from around here are you ${player}???`;
   }else if (correctNum <= 6){
     playerFeedback.innerHTML = `Beleaf in your self ${player}`;
   }else if (correctNum <= 8){
-    playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`
+    playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`;
   }else if (correctNum < 10){
-    playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`
+    playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`;
   }else if (correctNum >= 10){
-    playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`
+    playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`;
   }
 }

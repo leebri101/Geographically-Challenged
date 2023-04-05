@@ -4,7 +4,7 @@
  * Question and Answer structure:
  * Each Q&A object is set up as an array,
  * Each of the objects contain:
- * 1. Question numbers for player display in the #question-number element in quiz-tracker. 
+ * 1. Question numbers for the user display in the #question-number element in quiz-tracker. 
  * (This is a requirement as the indexes start from 0).
  * Unintuitive for casual users or with little to no knowledge.
  * 2. Each question text will fill the #question-box element.
