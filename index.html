@@ -17,7 +17,6 @@
         <h1><i class="fa-solid fa-earth-europe fa-2xl" style="color: rgb(var(--color-four));"></i> Geographically
             <span> Challenged</span>
         </h1>
-        <p class="deep-pink" style="font-weight: bold;">How well are you geographically placed?</p>
     </header>
     <main class="width">
         <!-- Landing section with play button-->
@@ -38,7 +37,7 @@
             <!-- Quiz section -->
             <section id="quiz" class="flex-column flex-center rounded-border max-width">
                 <!-- Quiz info bar-->
-                <section id="quiz-tracker flex-center margin rounded-border max-width">
+                <section class="quiz-tracker flex-center margin rounded-border max-width">
                     <!-- Question tracker -->
                     <div id="question-number">
                         <p>Question: <span id="current-question" style="font-weight: bolder;">-</span> of
@@ -57,8 +56,10 @@
                     </div>
                 </section>
                 <!-- Questions & answer options -->
-                <section id="quiz-container" class="flex-column flex-center text-center margin-zero rounded-border max-width">
-                    <section id="question-box" class="flex-center padding text-center margin-zero max-width">
+                <section id="quiz-container" 
+                    class="flex-column flex-center text-center margin-zero rounded-border max-width">
+                    <section id="question-box" 
+                        class="flex-center padding text-center rounded-border margin-zero max-width">
                         <p>QUESTION TEXT GOES HERE</p>
                     </section>
                     <section id="answer-box" class="flex-column text-center flex-center margin-zero max-width">
@@ -101,7 +102,7 @@
                     <p id="player-feedback">Player Feedback:</p>
                     <h3 id="home-page" class="light-blue">
                         <a href="index.html"><i class="fa-solid fa-arrow-right fa-beat"></i>
-              Try again? <i class="fa-solid fa-arrow-left fa-beat"></i></a>
+                        Try again? <i class="fa-solid fa-arrow-left fa-beat"></i></a>
                     </h3>
                 </section>
             </section>
