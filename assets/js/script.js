@@ -83,7 +83,7 @@ playerName.addEventListener("keypress", function (e){
 
 /**
  * Required time variables
-*/
+ */
 let timeLeft;
 const counter = document.getElementById("counter")
 let timer;
@@ -236,6 +236,11 @@ for (let answer of answerOptions){
   answer.addEventListener("click", choiceAnswer)
 }
 
+/**
+ * Click event passed to function to change selected button and it's style.
+ * By reseting answer styles before changing selected button's class,
+ * the appearance of one selected button is always maintained.
+ */
 function choiceAnswer(event){
   resetAnswerStyles();
   this.setAttribute("class", "answer-selected");
