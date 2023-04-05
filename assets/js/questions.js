@@ -1,5 +1,16 @@
 /* jshint esversion: 8 */
 
+/**
+ * Question and Answer structure:
+ * Each Q&A object is set up as an array,
+ * Each of the objects contain:
+ * 1. Question numbers for player display in the #question-number element in quiz-tracker. 
+ * (This is a requirement as the indexes start from 0).
+ * Unintuitive for casual users or with little to no knowledge.
+ * 2. Each question text will fill the #question-box element.
+ * 3. Each object conatins an array with 4 texted based choices to pick from.
+ * 4. The object which contains the correct answer will be compared from the user's selection from 'choices'.
+ */
 const quizQuestions = [{
     questionNum: "1",
     questionText: "Ninety percent of the Earth's population lives in which hemisphere?",
@@ -152,7 +163,7 @@ const quizQuestions = [{
       "Mauna Loa",
       "Kilimanjaro"
     ],
-    correctAns: "Mauna Loa located in Hawaii"
+    correctAns: "Mauna Loa"
   },
   {
     questionNum: "15",
@@ -170,7 +181,7 @@ const quizQuestions = [{
     questionText: "What is the tallest moutain the UK?",
     choices: [
       "Carn Eige",
-      "Snowdon",
+      "Snowdon - Yr Wyddfa",
       "Carrauntoohil",
       "Ben Nevis"
     ],
@@ -196,7 +207,7 @@ const quizQuestions = [{
       "3",
       "2"
     ],
-    correctAns: ""
+    correctAns: "4"
   },
   {
     questionNum: "19",
@@ -232,7 +243,7 @@ const quizQuestions = [{
     correctAns: "Switzerland"
   },
   {
-    questionNum: "23",
+    questionNum: "22",
     questionText: "In what ocean is the Bermuda Triangle located?",
     choices: [
       "Pacific Ocean",
@@ -243,7 +254,7 @@ const quizQuestions = [{
     correctAns: "Atlantic Ocean"
   },
   {
-    questionNum: "24",
+    questionNum: "23",
     questionText: "The Grand Canyon is located in which US state?",
     choices: [
       "Florida",
