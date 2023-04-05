@@ -238,8 +238,9 @@ for (let answer of answerOptions){
 
 /**
  * Click event passed to function to change selected button and it's style.
- * By reseting answer styles before changing selected button's class,
- * the appearance of one selected button is always maintained.
+ * The click event fucntion passes to the selected button and the style.
+ * Which resets the answer styles before changing the selected button's class,
+ * the appearence one of the answers will change upon clicking and hovering.
  */
 function choiceAnswer(event){
   resetAnswerStyles();
@@ -248,6 +249,15 @@ function choiceAnswer(event){
   evaluateAnswer(targetID);
 }
 
+/**
+ * Each time the user selects the answer it will evaluate the value 
+ * to the correct answer, which is built within each object of the
+ * quizQuestions array. 
+ * The "correct" or "incorrect" returned value is indicated within
+ * the scoreTracker() switch case which a gree, red and gray for feedback.
+ * It is also used a tally to indicate to the user how many correct answers 
+ * they have scored within the quiz.
+ */
 function evaluateAnswer(targetID){
   let playerAnswer = document.getElementById(targetID).innerText;
   let correctAnswer = quizQuestions[questionCount].correctAns;
@@ -260,6 +270,13 @@ function evaluateAnswer(targetID){
   }
 }
 
+
+/**
+ * The score tracker changes the appearence on the #point-tracker element,
+ * whether the answer is correct or incorrect. 
+ * (which is set by the evaluateAnswer fucntion)
+ * If no answer has been provided then it will recognize this for the user with a gray color.
+ */
 function scoreTracker(){
   let trackerColor;
   switch(yaynay){
@@ -276,23 +293,39 @@ function scoreTracker(){
       break;
   }
   document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
+  /**
+   * A yaynay variable for an "unaswered" value to the color gray,
+   * which resets the feedback back for each question.
+   * Only to be overided by the click event to pass to choiceAnswer()
+   * fdnction which calls for evaluateAnswer().
+   */
   yaynay = "unanswered";
 }
 
-
+/**
+ * It is only called once the quiz has reached the required quizLength variable of 10 questions.
+ * Showing the header and footer display again on smaller screens 
+ * to display the results section.
+ */
 function endOfQuiz(){
     quizSection.style.display = "none";
     resultsSection.style.display = "inline-flex";  
         headerSection.style.display = "block";
         footerSection.style.display = "block";
-    playerResults();
+    userResults();
 }
 
-function playerResults(){
+/**
+ * Called upon on the endOfQuiz function.
+ * It will display the amount of correct answers that have been answered
+ * by the user/the quiz total questions.
+ */
+function userResults(){
   const scoreResult = document.querySelector("#score-result");
   let resultOutput = `${correctNum} / ${questionCount}`;
   scoreResult.innerHTML = resultOutput
 
+  // A feedback dsiplay showing the player's name and message on the total score
   const playerFeedback = document.querySelector("#player-feedback");
   let player = playerName.value;
   if (correctNum <= 2){
