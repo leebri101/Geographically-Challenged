@@ -20,11 +20,10 @@ const choiceOne = document.getElementById("answer1");
 const choiceTwo = document.getElementById("answer2");
 const choiceThree = document.getElementById("answer3");
 const choiceFour = document.getElementById("answer4");
-const timeLeftBar = document.getElementById("time-left");
 const resultsSection = document.getElementById("results");
 const answerBox = document.getElementById("answer-box");
 const answerOptions = answerBox.querySelectorAll(".answer");
-
+const timeLeftBar = document.getElementById("time-left");
 
 function startNewGame() {
   landingSection.style.display = "none";
@@ -74,7 +73,7 @@ let timer;
 
 function startTimer(){
   timeLeft = 30;
-  timer =setInterval(function () {
+  timer = setInterval(function () {
     countdown(timeLeft);
   }, 1000);
 }
@@ -106,6 +105,10 @@ function countdown(seconds){
 
 let timeLeftWidth= 100; 
 
+/**
+ * Timer can only be reset by nextQuestion()function.
+ * When the timer reaches zero when or when the player moves onto the nect question.
+ */
 function resetTimer (){
   counter.innerHTML =`30`;
   timeLeftWidth = 100;
@@ -135,6 +138,15 @@ function shuffle(array) {
 return array;
 }questionCount
 
+
+/*
+ * The nextQuestion() function is th main way to, calling on fucntions to:
+ * 1. To reset to answer/timer elements to the default values/styles.
+ * 2. To allow for paging and moving onto the next question.
+ * 3. Manipulating the DOM elements in the score-tracker for players to see the current progress.
+ * 4. Restarting timers to show players question they are on in the score tracker.
+ * 5. To check if the quiz has reached the max length of 10 questions. 
+ */
 function nextQuestion(){
   resetAnswerStyles();
   resetTimer();
