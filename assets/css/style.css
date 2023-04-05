@@ -79,12 +79,6 @@ header h1 {
   margin-bottom: 0;
 }
 
-header p {
-  font-size: 20px;
-  margin-top: 0;
-  text-align: center;
-}
-
 header span {
   color: rgb(var(--color-one));
   font-weight: bolder;
@@ -236,6 +230,7 @@ section p {
 /* Quiz section */
 #quiz {
   display: none;
+  background-size: cover;
 }
 
 #question-box {
@@ -332,22 +327,22 @@ section p {
 }
 
 /*Results page*/
-#end-results {
+#results {
   display: none;
   justify-content: space-around;
   width: 80vw;
-  margin: 2em 0;
+  margin: 2.25em 0;
   background-color: rgb(var(--color-three), 0.80);
   position: relative;
   overflow: hidden;
   border-radius: 10px;
 }
 
-#end-results>* {
+#results>* {
   z-index: 1;
 }
 
-#end-results::before {
+#results::before {
   content: '';
   position: absolute;
   width: 250vw;
@@ -356,7 +351,7 @@ section p {
   animation: animate 1.2s linear infinite;
 }
 
-#end-results::after {
+#results::after {
   content: '';
   inset: 4px;
   position: absolute;
