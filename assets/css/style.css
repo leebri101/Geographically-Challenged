@@ -187,7 +187,7 @@ a:hover {
   font-size: 200px;
   border-radius: 50%;
   color: rgba(var(--color-six), 0.85);
-  animation: pulse 0.s;
+  animation: pulse 0.5s;
 }
 
 /* Start Game section*/
@@ -195,10 +195,6 @@ a:hover {
   background-color: rgba(var(--color-three),0.85);
   width: calc(90% - 1em);
   display: none;
-}
-
-section p {
-  font-size: 20px;
 }
 
 ::placeholder {
@@ -234,10 +230,11 @@ section p {
 
 #question-box {
   background-color: rgba(var(--color-five), 0.85);
-  border: 2px solid rgba(var(--color-three));
+  border: 3px solid rgb(var(--color-three));
   color: #fff;
   display: inline-flex;
   width: 80vw;
+  font-weight: bold;
 }
 
 #answer-box {
@@ -247,21 +244,27 @@ section p {
 }
 
 .answer {
-  background-color: white;
-  color: black;
-  border: 3px solid rgb(var(--color-one));
+  background-color: rgb(var(--color-two));
+  color: white;
+  border: 3px solid white;
   border-radius: 15px;
-  border: 3px solid rgb(var(--color-one));
+  border: 3px solid white;
   margin: 0.5em 0;
   width: 100%;
   padding: 0.5em;
   font-weight: bold;
+}
+
+.answer:hover {
+  background-color: rgba(var(--color-three), 0.85);
+  color: white;
+  transition: background-color 0.5s ease-out 100ms;
 }
 
 .answer-selected {
   background-color: rgba(var(--color-three), 0.85);
   color: white;
-  border: 3px solid rgba(var(--color-one), 0.85);
+  border: 3px solid white;
   border-radius: 15px;
   margin: 0.5em 0;
   width: 100%;
@@ -269,15 +272,24 @@ section p {
   font-weight: bold;
 }
 
+
 #quiz-nav {
   display: inline-flex;
 }
 
+.next-btn-holder {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #next-btn {
-  background-color: rgb(var(--color-three));
+  background-color: rgba(var(--color-four), 0.85);
+  color: white;
   font-size: 1.25em;
   font-weight: bold;
   padding: 0.25em 0.5em;
+  text-align: center;
+  border: 3px solid rgba(var(--color-three));
 }
 
 
@@ -310,7 +322,7 @@ section p {
 /* Feedback to users during game */
 #point-tracker {
   display: inline-flex;
-  background-color: rgba(var(--color-three)), 0.70;
+  background-color: rgba(var(--color-three)0.80);
   border-radius: 15px;
   width: 80vw;
   justify-content: space-around;
@@ -359,7 +371,6 @@ section p {
   border-radius: 10px;
 }
 
-#player-feedback a,
 #home-page a {
   color: rgb(var(--color-seven));
 }
