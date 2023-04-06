@@ -348,7 +348,7 @@ a:hover {
   width: 250vw;
   height: 250%;
   background: linear-gradient(rgba(var(--color-one), 0.85), rgba(var(--color-four), 0.85));
-  animation: animate 1.5s linear infinite;
+  animation: animate 2s linear infinite;
 }
 
 #results::after {
