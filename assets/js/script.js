@@ -329,14 +329,14 @@ function userResults(){
   const playerFeedback = document.querySelector("#player-feedback");
   let player = playerName.value;
   if (correctNum <= 2){
-    playerFeedback.innerHTML = `<a href = You're not from around here are you ${player}???`;
-  }else if (correctNum <= 6){
+    playerFeedback.innerHTML = "You are not from around here are you ${player}?";
+  } else if (correctNum <= 6){
     playerFeedback.innerHTML = `Beleaf in your self ${player}`;
-  }else if (correctNum <= 8){
+  } else if (correctNum <= 8){
     playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`;
-  }else if (correctNum < 10){
+  } else if (correctNum < 10){
     playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said "Sir David Attenborough.`;
-  }else if (correctNum >= 10){
+  } else if (correctNum >= 10){
     playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`;
   }
 }
