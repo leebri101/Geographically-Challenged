@@ -335,7 +335,7 @@ function userResults(){
   } else if (correctNum <= 8){
     playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`;
   } else if (correctNum < 10){
-    playerFeedback.innerHTML = `My word here we see a rare yellow spotted ${player} strutting proudly about their quiz score, said Sir David Attenborough.`;
+    playerFeedback.innerHTML = `Hey ${player} you got some good Chemistree there.`;
   } else if (correctNum >= 10){
     playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`;
   }
