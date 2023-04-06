@@ -20,10 +20,6 @@
   --color-four: 1, 171, 46;
   /* dark green */
   --color-five: 4, 98, 29;
-  /* light pink */
-  --color-six: 255, 182, 193;
-  /* deep pink */
-  --color-seven: 255, 20, 147;
 }
 
 /* Color Classes*/
@@ -45,14 +41,6 @@
 
 .dark-green {
   color: rgb(var(--color-five))
-}
-
-.light-pink {
-  color: rgb(var(--color-six))
-}
-
-.deep-pink {
-  color: rgb(var(--color-seven))
 }
 
 /* Body, Footer, Header styling */
@@ -186,7 +174,7 @@ a:hover {
 #play-btn:hover {
   font-size: 200px;
   border-radius: 50%;
-  color: rgba(var(--color-six), 0.85);
+  color: rgba(var(--color-four), 0.85);
   animation: pulse 0.5s;
 }
 
@@ -283,7 +271,7 @@ a:hover {
 }
 
 #next-btn {
-  background-color: rgba(var(--color-four), 0.85);
+  background-color: rgba(var(--color-five), 0.85);
   color: white;
   font-size: 1.25em;
   font-weight: bold;
@@ -360,7 +348,7 @@ a:hover {
   width: 250vw;
   height: 250%;
   background: linear-gradient(rgba(var(--color-one), 0.85), rgba(var(--color-four), 0.85));
-  animation: animate 1.2s linear infinite;
+  animation: animate 1.5s linear infinite;
 }
 
 #results::after {
@@ -372,7 +360,7 @@ a:hover {
 }
 
 #home-page a {
-  color: rgb(var(--color-seven));
+  color: rgb(var(--color-four));
 }
 
 /* Key Frames and animations */
