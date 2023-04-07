@@ -12,7 +12,7 @@
     * [**Color Scheme**](#color-scheme)
 1. [**Current Features on all pages**](#current-features-on-all-pages)
     * [**Headers:**](#headers)
-        * [*Title*](#title)
+        * [*Title*](#Title)
         * [*Logos*](#logos)
         * [*Navigation tabs*](#navigation-tabs)
     * [**Hero Images:**](#hero-images)
@@ -41,70 +41,63 @@
 
 ## **Project Planning**
 ### **Target Audiences:**
-<!-- * For users --> 
+* For users who are interesting in a playing short games.
+* For users who are learning about geography.
 
 ### **Site Objectives:**
-* 
+* Allowing users to know of short fun facts about geography.
+* Educating the user on using this as a fun way of educating themselves.
 
 ### **User Stories:**
-* 
+* As a user I want to give feedback via the given social media links to further 
+improve/enhance the quiz to the owner.
+* As a user I want to be able to easily navigate the quiz with ease.
+* As a user I want have fun on short quizs without being bored.
+* as a user I want the quiz to be as simple easy to understnd.
 
 ### **How will this be achieved:**
-<!-- (to change all info) * The home page will allow the user a brief introduction as to what Yu-Gi-Oh is and a navigation point to different parts of the site.
-
-* The site will provbide multiple links and resources such as:
-    * The official website on Yu-Gi-Oh where it will show the latest updates and new decks that will be released by Konami.
-    * Links to an extenseive database/deckbuilder where the user can create tehir ideal deck.
-    * Embedded Youtube Videos showcasing tips and tricks.
-
-* The site will provide different options on where to be involved with the Yu-Gi-Oh Community.
-    * Through official Konami made apps where users can pit against each other virtually or in person.
-    * Fan-made websites where the user can play virtual decks.
-
-* The site will provide users a link on where to watch the series (providing they have an account linked via Crunchyroll or any affiliated anime streaming sites). -->
-
+* The landing page with have a simple CTA (Call To Action) input button at which the user must ineteract with to continue the quiz.
+* The page will have the following things:
+    * A large coloured CTA play button at which when the user/player hovers over, a small animation will occur and change colours briefly tempting the user to click it which leads to a different pop up to appear.
+    * A small text box which the user has to input their name to start the quiz, if nothing has been inputted the quiz cannot start.
+    * A series of questions out of ten which displays the question, and four different options at which the user must pick one correct answer to see if it is correct or not.
+    * A results page which gives feedback to players as to how many questions they have answered correctly out of 10. 
+    
 ### **WireFrames:**
-<!--
-* To prevent any digression to the from the scope objectives, I have made wireframes for the project. Both the mobile and desktop version will have links to their respected versions of all six pages of the Yugioh guide:
 
-    * Mobile Wireframes:
-    * [Home-page](doc/wireframes/home-page.png)
-    * [Essentials](doc/wireframes/essentials.png)
-    * [Card Info](doc/wireframes/card-info.png)
-    * [Decks](doc/wireframes/decks.png)
-    * [How To play](doc/wireframes/how-to-play.png)
-    * [Banlist](doc/wireframes/banlist.png)
+* In order to prevent any digression to project aim & objectives I have made a few wire frames as a plan to refer back to from in case of any major changes.
 
-    * Desktop Wireframes:
-    * [Home-page](doc/wireframes/about-page.png)
-    * [Essentials](doc/wireframes/essentials-page.png)
-    * [Card Info](doc/wireframes/card-info-page.png)
-    * [Decks](doc/wireframes/decks-page.png)
-    * [How To play](doc/wireframes/how-to-play-page.png)
-    * [Banlist](doc/wireframes/banlist-page.png)
+[Wireframes](doc/wireframes/) were all designed in Balsamiq desktop.
+* [Desktop-Landing-Page](doc/wireframes/desktop-landing-page.png)
+* [Desktop-Landing-Page](doc/wireframes/desktop-quiz-page.png)
+* [Desktop-Landing-Page](doc/wireframes/desktop-results-page.png)
+* [Desktop-Landing-Page](doc/wireframes/mobile-landing-page.png)
+* [Desktop-Landing-Page](doc/wireframes/mobile-quiz-page.png)
 
-There was small changes from the planned wireframes to enhancve the UX (User Experience). Changess include:-
-
-* Links on the homepage which direct teh user to differnt extrnal site e.g Youtube or the offcial Yu-Gi-OH site.
-* Headings and placement of content to allow for a smoother flow and consistency across all pages.
+There was small changes from the planned wireframes to enhance the UX (User Experience). 
+Changes include:-
+* An interactive CTA play button which is changes color upon hovering.
+* A placeholder on the start-game section text box for players to input their names and warning to users if they start the game with no input in the text box.
+* An animation on the timer clock which shows a small stop watch shake after each second to indicate the user that time is ticking.
+* A hover animation over the 4 different choices of answers within the answers section of the quiz which change color whilst the animation occurs.
+* The results page having a box which shows the player's score and a coloured gradient on the border of the box which constantly spins aorund the edge of the box.
+* A small Favicon to act as an icon for the webpage.
 
 ### **Color Scheme:**
- * When creating the intial overall design of the site I have decided to use this colour scheme to go with the overall Yugioh to make it look more mysterious and within the color scheme of the cards from monster effects, to spells, traps and the newer cards which Konami have introduced, for example; XYZ , Synchro and Link monsters.
+ * When creating the design of the quiz site I have went with this colour scheme to match the overall theme of georgraphy with the colors of the earth having blue and green elements.  
 
- ![Contrast Grid](doc/screenshots/color-scheme.webp)
+ ![Contrast Grid](doc/sceenshots/color-scheme.png)
 
 ## **Current Features on all pages**
 ###  **Headers**
-* All Headers have always been stuck to the top left of the pages or the center for mobile. The orginal plan was to use the headers as a way to naviagte back to the home-page but due to time constraints of the project being due very soon, it will be added at a later date a new feature.
-
-* The headers contain all of the features
+* The header has been placed in the top center of the page to allow for a easy transition between desktop and mobile so it doesn't affect the page in huge way. 
 
  The header itself contains the following features: 
 
 ### *Title:*
-![Title](doc/screenshots/title.webp)
+![Title](doc/sceenshots/header.png)
 
-* The title is there to indicate the purpose of each page.
+* The Title is there to show the name of the page.
 
 #### *Logos:*
 * The logos illustrate the site's theme and offer something to appease the user's eye by filling the blank space without distracting from the title.
