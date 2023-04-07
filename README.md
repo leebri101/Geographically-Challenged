@@ -14,7 +14,7 @@
     * [**Headers:**](#headers)
         * [*Title*](#Title)
         * [*Call To Action Button*](#call-to-action-button)
-        * [*Navigation tabs*](#navigation-tabs)
+        * [*Start Game Section*](#start-game-section)
     * [**Hero Images:**](#hero-images)
       * [**Home-Page**:](#home-page)
           * [*Hero-Image*](#hero-image)
@@ -89,7 +89,7 @@ Changes include:-
  ![Contrast Grid](doc/sceenshots/color-scheme.png)
 
 ## **Current Features on all pages**
-###  **Headers**
+###  **Header**
 * The header has been placed in the top center of the page to allow for a easy transition between desktop and mobile so it doesn't affect the page in huge way. 
 
  The header itself contains the following features: 
@@ -101,16 +101,20 @@ Changes include:-
 
 #### *Call To Action Button:*
 * The CTA is there with theme of the Earth to match the theme and catch the user's attention the moment that they enter the site. 
-
+    
 ![CTA Button](doc/sceenshots/cta-play-button.png)
+    
+* Mobile version of CTA button with header and footer.
 
-#### *Navigation tabs:*
-* all of the navigation tabs appear on all 6 pages of the site.
-* Each of the pages links to the about page, essentials, card information, decks, how to play, and the current banlist allowing for easy navigation between the tabs.
-* In the image below it shows that whenever a user is on the current page it is highlighted underneath a small purple line.
-* Hovering over the menu will turn the highlighted word in a different color.
+![Mobile-version](doc/sceenshots/mobile-version.png)
 
-  ![Navigation tabs](doc/screenshots/tabs.webp)
+#### *Start Game Section:*
+* The start game section has an autofocus placeholder on the text box which allows for more accessibilty to the user, which is useful on mobile devices as the text cursor is already highlighted in the text box which saves time for the user to manually navigate to it as. 
+* Two interactive buttons for the user to input one of which is the Start Game, which upon text input and clicking the button will send the user to commence the geography quiz. The Quit button will send the user back to the main screen where the CTA button is displayed.
+* A error handler which diplays a red border in the text box if the user hasn't provided any sort of text or name.
+* An event listener where the user can press the ENTER key which has the same response as clicking the Start game button. 
+
+  ![Start Game Section](doc/sceenshots/placeholder-input.png)
 
 
 ### **Hero Images**
