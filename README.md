@@ -13,7 +13,7 @@
 1. [**Current Features on all pages**](#current-features-on-all-pages)
     * [**Headers:**](#headers)
         * [*Title*](#Title)
-        * [*Logos*](#logos)
+        * [*Call To Action Button*](#call-to-action-button)
         * [*Navigation tabs*](#navigation-tabs)
     * [**Hero Images:**](#hero-images)
       * [**Home-Page**:](#home-page)
@@ -99,16 +99,10 @@ Changes include:-
 
 * The Title is there to show the name of the page.
 
-#### *Logos:*
-* The logos illustrate the site's theme and offer something to appease the user's eye by filling the blank space without distracting from the title.
+#### *Call To Action Button:*
+* The CTA is there with theme of the Earth to match the theme and catch the user's attention the moment that they enter the site. 
 
-    * The logo on mobile version is to make sure that the title is enalarged on a smaller screen for a better user experience. 
-
-        ![Mobile Logo](doc/screenshots/mobile-logo.webp)
-
-    * Whereas the logo on the desktop version is to fill as much white space as possible on a higher screen resolution for a much cleaner appearence. 
-
-        ![Desktop Logo](doc/screenshots/logo.webp)
+![CTA Button](doc/sceenshots/cta-play-button.png)
 
 #### *Navigation tabs:*
 * all of the navigation tabs appear on all 6 pages of the site.
@@ -202,7 +196,7 @@ the picture used for the main banner for all of the pages is from a fan based si
 -->
 ***
 ## **Testing-Phase**
-<!--  <> [TESTING.md](TESTING.md) -->
+[TESTING.md](TESTING.md)
 ***
 ## **Deployment**
 The project has been deployed with the following steps: -
