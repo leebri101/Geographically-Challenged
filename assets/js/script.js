@@ -57,9 +57,9 @@ leaveQuizBtn.addEventListener("click", leaveQuiz);
  * Once a player name has been inputted, questions are randomised, build and display first question.
  * It will show the user that they are on the first question which will automatically start the timer.
  */
-function startQuiz(){;
+function startQuiz(){
 if (playerName.value == "" || playerName == null || playerName == undefined){
-    playerName.style.borderBlockColor = "red"
+    playerName.style.borderBlockColor = "red";
   } else{
     quizSection.style.display = "inline-flex";
     newGameSection.style.display = "none";
@@ -85,7 +85,7 @@ playerName.addEventListener("keypress", function (e){
  * Required time variables
  */
 let timeLeft;
-const counter = document.getElementById("counter")
+const counter = document.getElementById("counter");
 let timer;
 
 /**
@@ -161,7 +161,8 @@ function shuffle(array) {
   }
 
 return array;
-}questionCount
+}
+
 
 
 /**
@@ -213,7 +214,7 @@ function buildQuizQuestion(questionID){
  */
 function resetAnswerStyles(){
   for(let answer of answerOptions){
-    answer.setAttribute("class", "answer")
+    answer.setAttribute("class", "answer");
   }
 }
 
@@ -233,7 +234,7 @@ function progressBar(questionCount){
  * The class in turn applies css properties to make selection stand out to user.
 */
 for (let answer of answerOptions){
-  answer.addEventListener("click", choiceAnswer)
+  answer.addEventListener("click", choiceAnswer);
 }
 
 /**
@@ -289,7 +290,7 @@ function scoreTracker(){
     case undefined:
     case null:
     case "unanswered":
-      trackerColor = "gray"
+      trackerColor = "gray";
       break;
   }
   document.getElementsByClassName("circle")[questionCount - 1].style.backgroundColor = trackerColor;
@@ -323,7 +324,7 @@ function endOfQuiz(){
 function userResults(){
   const scoreResult = document.querySelector("#score-result");
   let resultOutput = `${correctNum} / ${questionCount}`;
-  scoreResult.innerHTML = resultOutput
+  scoreResult.innerHTML = resultOutput;
 
   // A feedback dsiplay showing the player's name and message on the total score
   const playerFeedback = document.querySelector("#player-feedback");
