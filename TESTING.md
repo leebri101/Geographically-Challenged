@@ -21,13 +21,22 @@ During development phase, I was manually testing the site in two ways:-
   1. Chrome
   2. Opera GX
   3. Edge
-
-* I also used devtools to experiment the different screen sizes and devices from 450px up to 4000px in width. 
 * I have also asked a small group of people to test the site using Apple & Android products using safari. The users reported back with no issues with overall content but with minor styling amendmants or styling suggestions which will be implimented in the near future with further testing.
 
+* Google Chrome: 
+![Google Chrome](doc/sceenshots/google-chrome.png)
+
+* Opera GX:
+![Opera GX](doc/sceenshots/opera-gx.png)
+
+* Microsoft Edge:
+![Microsoft Edge](doc/sceenshots/microsoft-edge.png)
 ### **Known Issues and Bugs**
 
 * Below is the list of bugs that have been encountered in the porject and list of solutions used during the development & testing phase of the project.
+
+* Known Issues:
+  * Results issue has a grey border around teh linear gradient border.
 
 
 
