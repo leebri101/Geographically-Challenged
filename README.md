@@ -10,6 +10,7 @@
     * [**How Is This Will Be Achieved:**](#how-will-this-be-achieved)
     * [**Wireframes**](#wireframes)
     * [**Color Scheme**](#color-scheme)
+    * [**Reused Code**](#reused-code)
 1. [**Current Features on all pages**](#current-features-on-all-pages)
     * [**Headers:**](#headers)
         * [*Title*](#Title)
@@ -79,6 +80,13 @@ Changes include:-
  * When creating the design of the quiz site I have went with this colour scheme to match the overall theme of georgraphy with the colors of the earth having blue and green elements.  
 
  ![Contrast Grid](doc/sceenshots/color-scheme.png)
+
+### **Reused Code:**
+* Some code has been re-used in from the first milestone project due to the simplicity and effectiveness it has on the overall layout of the final design.
+    * Which one of any said weblinks have an original colours.
+    * Upon hovering over it or clicking it will change colours. 
+    * After visting the said weblink it will change to a secondary color. With the hover effect in place.
+![Reused Code](doc/sceenshots/reused-code.png)
 
 ## **Current Features on all pages**
 ###  **Header**
