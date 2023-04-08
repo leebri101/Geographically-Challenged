@@ -159,6 +159,7 @@ Features used:
     * Potentially adding a leaderboard system/table to challenge and rival other users.
     * A narration voice over for all the questions and answers for users with disablity issues.
     * A mixture of sound, images and text based questions and answers.
+    * A shuffler for answer as well.
     * Different modes within the quiz for example:
         * A speed test to see how quick and accurate the user can answer the questions.
         * Different difficulites in place to challenge the user.
