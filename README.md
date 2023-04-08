@@ -161,7 +161,7 @@ Features used:
     * A mixture of sound, images and text based questions and answers.
     * Different modes within the quiz for example:
         * A speed test to see how quick and accurate the user can answer the questions.
-        * 
+        * Different difficulites in place to challenge the user.
 
 ***
 ## **Testing-Phase**
@@ -173,9 +173,9 @@ The project has been deployed with the following steps: -
 1. Within the project's [repository](https://github.com/leebri101/Geographically-Challenged), you select the **Settings** tab.
 2. Then select the **Pages** menu tab on the left side.
 3. Under **Source** then, select the **Main** branch from the drop-down menu and click **Save**.
-4. A message will then show that the porject has been successfully launched with the live link.
+4. A message will then pop up that the project has been successfully deployed with a live link.
 
-You can visit the live link via this URL - [Geographically Challenged](https://leebri101.github.io/Yu-Gi-Oh-Guide/index.html)
+You can visit the live link via this URL - [Geographically Challenged]
 ***
 
  ## **Credits**
