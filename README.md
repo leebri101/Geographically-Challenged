@@ -175,7 +175,7 @@ The project has been deployed with the following steps: -
 3. Under **Source** then, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will then pop up that the project has been successfully deployed with a live link.
 
-You can visit the live link via this URL - [Geographically Challenged]
+You can visit the live link via this URL - [Geographically Challenged](https://leebri101.github.io/Geographically-Challenged/)
 ***
 
  ## **Credits**
