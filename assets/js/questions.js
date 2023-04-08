@@ -53,7 +53,7 @@ const quizQuestions = [{
       "Pacific, Atlantic, Indian, Southern and Arctic",
       "Indian, Artic, Atlantic, Southern, and Pacific"
     ],
-    correctAns: "Pacific, Atlantic, Indian, Southern & the Arctic"
+    correctAns: "Pacific, Atlantic, Indian, Southern and Arctic"
   },
   {
     questionNum: "5",
