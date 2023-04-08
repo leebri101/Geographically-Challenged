@@ -15,21 +15,14 @@
         * [*Title*](#Title)
         * [*Call To Action Button*](#call-to-action-button)
         * [*Start Game Section*](#start-game-section)
-    * [**Hero Images:**](#hero-images)
-      * [**Home-Page**:](#home-page)
-          * [*Hero-Image*](#hero-image)
-      * [**Essentials-Page**:](#essentials-page)
-          * [*Hero-Image*](#hero-image-1)
-    * [**Anchor Tags Within the Pages Contents**](#anchor-tags-within-the-pages-contents)
+      * [**Quiz-Section**:](#quiz-section)
+          * [*Quiz-Tracker*](#quiz-tracker)
+      * [**Questions and Answers**:](#questions-and-answers)
+          * [*Q and A*](#q-and-a)
+    * [**Point-Tracker**](#point-tracker)
+    * [**Results-Section**](#results-section)
     * [**Footer**](#footer)
     * [**Typsetting**](#typesetting)
-1. [**Individual Page Contents features**](#individual-page-contents-features)
-    * [**Home-Page Contents**](#home-page-contents)
-    * [**Essentials-Page Contents**](#essentials-page-contents)
-    * [**Cardinfo-Page Contents:**](#cardinfo-page-contents)
-    * [**Decks-Page Contents:**](#decks-page-contents)
-    * [**How-to-play-Page Contents:**](#how-to-play-page-contents)
-    * [**Banlist-Page Contents:**](#banlist-page-contents)
 1. [**Potential-Features**](#future-enhancements)
 1. [**Testing Phase**](#testing-phase)
 1. [**Deployment**](#deployment)
@@ -64,15 +57,14 @@ improve/enhance the quiz to the owner.
     * A results page which gives feedback to players as to how many questions they have answered correctly out of 10. 
     
 ### **WireFrames:**
-
 * In order to prevent any digression to project aim & objectives I have made a few wire frames as a plan to refer back to from in case of any major changes.
 
 [Wireframes](doc/wireframes/) were all designed in Balsamiq desktop.
 * [Desktop-Landing-Page](doc/wireframes/desktop-landing-page.png)
-* [Desktop-Landing-Page](doc/wireframes/desktop-quiz-page.png)
-* [Desktop-Landing-Page](doc/wireframes/desktop-results-page.png)
-* [Desktop-Landing-Page](doc/wireframes/mobile-landing-page.png)
-* [Desktop-Landing-Page](doc/wireframes/mobile-quiz-page.png)
+* [Desktop-Quiz-Page](doc/wireframes/desktop-quiz-page.png)
+* [Desktop-Results-Page](doc/wireframes/desktop-results-page.png)
+* [Mobile-Landing-Page](doc/wireframes/mobile-landing-page.png)
+* [Mobile-Quiz-Page](doc/wireframes/mobile-quiz-page.png)
 
 There was small changes from the planned wireframes to enhance the UX (User Experience). 
 Changes include:-
@@ -95,9 +87,9 @@ Changes include:-
  The header itself contains the following features: 
 
 ### *Title:*
-![Title](doc/sceenshots/header.png)
-
 * The Title is there to show the name of the page.
+
+![Title](doc/sceenshots/header.png)
 
 #### *Call To Action Button:*
 * The CTA is there with theme of the Earth to match the theme and catch the user's attention the moment that they enter the site. 
@@ -116,111 +108,84 @@ Changes include:-
 
   ![Start Game Section](doc/sceenshots/placeholder-input.png)
 
+### **Quiz-Section**:
+#### *Quiz-tracker:*
+Features used:
+* A indicator display to track the current question number the user is on out of the total quiz questions.
+* A countdown timer with a animation which moves each time a second is lost within the alloted time length.
+* A countdown bar to also track time but visually display the length of time left in the bar.
+![Quiz-section](doc/sceenshots/tracker-update.png)
 
-### **Hero Images**
-* I have only added the hero image on the main home-page to act as the main attraction at which people would see once they open the link.
-* The image has a zoom animation to attract the user to make it more presentable. 
-* Each of the iamges used in this project is within them of Yugioh or explaining the functionality of the cards.
+### **Questions and Answers**:
+#### *Q and A:*
+Features used:
+* A question with a four choice option answer selector. 
+* Users being able to select any answer before clicking next to proceed to the next question.
+* Each answer having a hover animation with a color changing function,  the color also changes when the user clicks on answer. 
+* The Fisher-Yates method used to shuffle all the questions and answers to any given random order out of ten. So no same question is used twice.
 
-### **Home-Page**:
-#### *Hero-Image:*
-The picture used in as the hero image is none other than Linkuriboh, this cute round monster has appeared on the anime series of Yu-Gi-Oh Vrains which is the first to introduce Link summoning which is later introduced in the TCG game.
-![Home-page hero-image](doc/screenshots/linkuriboh.jpg)
+![Quiz-Questions](doc/sceenshots/quiz-questions.png)
 
-### **Essentials-Page**:
-#### *Hero-Image:*
-the picture used for the main banner for all of the pages is from a fan based site which produce incredible wallpapers for all Yu-Gi-Oh fans.
-![Essentials-page hero-image](doc/screenshots/yugioh-wallpaper.jpg)
+## **Point-Tracker**
+* The point tracker is used to display to the user whether they have; answered the question correctly, gave an incorrect answer, did not give answer and to show which answer they are currently on.
+* The point tracker is indicated in four different colors:
+    * Green: Meaning the user has answered the question correctly.
+    * Red: Meaning the user has answered incorrectly.
+    * Gray: Meaning the user has ran out of time or can alternatively skip the question.
+    * Yellow: To indicate to the user that they are on the current question.
+![Point-Tracker](doc/sceenshots/progress-tracker.png)
 
-## **Anchor Tags Within the Pages Contents**
-* All anchor tags that have been used in the page's contents do not have a under-lined hyperlink.
-* Instead there is a color change upon hovering the links and also a color change upon visting the pages.
-* The Hoevr over effect on all th ehyper links show a red color contrast from the original gold text to indicate the user about to select a different link.
-* Have a hover-over effect that turns the Hyperlink a darker color from the gold gradient used throughout the page.
-* At which i have created a seperate code in style.css to show that once the user has been to the site it will change from gold to red.
+## **Results-Section**
+* The results sections shows the following things:
+    * The users score out of 10.
+    * A feedback message to the user as to whatever associated score they have recieved.
+    * A Play Again button if the users wishes to replay the quiz again.
+![Resuts-Section](doc/sceenshots/results-page.png)
 
 ## **Footer**
-* The footer has direct links to all of the offcial social media accounts of the Yu-Gi-oh franchise with an open invitation to follow all channels. 
-
-* All the icons were imported from  the font awesome site using Javascript at the bottom of the page.
-
-* In some of the footers on the rest of the pages I have included that a disclaimer that the site that is being built is merely a fan-based site at which it acts as a guide for returning or new players interested in the franchise and that all of the stated material goes to the rightful owners of the Yu-Gi-Oh franchise of STUDIO DICE/SHUEISHA, TV TOKYO, and KONAMI.
-
-![Footer-Page](doc/screenshots/footer.webp)
+* All icons that were used in the footer is sourced from font awesome.
+* A personal copyright has been added in-case of plagerism.
+* A personal link to my GitHub page which users can track my coding journey.
+![Footer-Page](doc/sceenshots/footer.png)
 
 ## **Typesetting**
- Throughput the project all of the fonts that were used were primarily 
-  * Oswald - for an eyecatching look.
-  * Space mono- for the retro gaming effect it has.#
-
-  * All Fonts that have been sued have been sourced from Google Fonts (as quoted in the credits)
-
-## **Individual Page Contents features**
-
-### **Home-Page Contents:**
-
-* The main page gives a brief overview of what yugioh is. 
-* The linked youtube video is showcasing tips and tricks on returning player son how to get better at the TCG game. 
-![About-Page](doc/screenshots/about-page.webp)
-
-### **Essentials-Page Contents:**
-
-* This page gives you information at which the person needs certain resources if they choose to play th egame in real life.
-* It also states the various different accessories which are available to enhance the users exeprience such as card sleeves for the added protection of the cards and the aesthetically pleasing artwork offered on said card sleeves or game mats.
-* It also shows a diagram showing the different indicated numbers of the playing mat at which players have to set up their own decks.
-![What-you-need](doc/screenshots/what-you-need.webp)
-
-### **Cardinfo-Page Contents:**
-
-* This page explains on the basic structure of the card, consisting of the name, card description, the type, the attribute, level, the printed official card number, and its attack and defense points.
-* below it explains the different card effects that cards have and how each one has its own use in any given situation.
-![Reading-cards](doc/screenshots/reading-cards.webp) 
-
-### **Decks-Page Contents:**
-* The Decks page offer fan favourites to the top tier meta cards at which many players use in various tournaments.
-* Each of the cards are clickable and will send the user to an external site which will show teh user of the full deck to build, if they choose to do so.
-![Decks-page](doc/screenshots/top-10-decks.webp)
-
-### **How-to-play-Page Contents:**
-* This is a tutorial at which it showcases a step-by-step guide on howto play the game explaining the turn systems and how toplay various different cards.
-* It also explains the different scenarios at which players can tactically play at their discretion and th evarious Spell and trap icons and meanings behind the cards.
-![How-to-play-page](doc/screenshots/how-a-turn-works.webp)
-
-### **Banlist-Page Contents:**
-* This just shows a very static list of all of the upadated various cards that have been banned in any sort of offcial competition setting by Konami.
-* My Original idea was to link each of the cards to the data-base of the offcial Yu-Gi-Oh site but it will be mentioned in the [Potential-Features](#potential-features). 
-![Banlist-Page](doc/screenshots/current-banlist.webp)
-
+ Throughout the second project milestone only this font was used:
+  * Poppins - for a more simplistic look to users so it not too much for them.
+* Fonts that have used in the project have been sourced from Google Fonts (quoted in the credits).
 
 ## **Potential-Features**
-* Due to the project deadlines being very tight urgent the project had to be scaled down to a more simpler version of the geography quiz but these are the features that i would like to potentially add or implement in the near future:
-    * An initeractive version with sounds and unique animations.
-    * Potentially adding a leaderboard system / table to challenge and rival other users.
+* Due to the project deadlines being in a very tight timeframe the project had to be scaled down to a more simpler version of the geography quiz but these are the features that I would like to potentially add or implement in the near future:
+    * An interactive version with sounds and unique animations.
+    * Potentially adding a leaderboard system/table to challenge and rival other users.
     * A narration voice over for all the questions and answers for users with disablity issues.
--->
+    * A mixture of sound, images and text based questions and answers.
+    * Different modes within the quiz for example:
+        * A speed test to see how quick and accurate the user can answer the questions.
+        * 
+
 ***
 ## **Testing-Phase**
 [TESTING.md](TESTING.md)
 ***
 ## **Deployment**
 The project has been deployed with the following steps: -
-<!--
-1. Within the project's [repository](https://github.com/leebri101/Yu-Gi-Oh-Guide), you then select the **Settings** tab.
-2. Then select the **Pages** menue tab on the left side.
+
+1. Within the project's [repository](https://github.com/leebri101/Geographically-Challenged), you select the **Settings** tab.
+2. Then select the **Pages** menu tab on the left side.
 3. Under **Source** then, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will then show that the porject has been successfully launched with the live link.
 
-You can visit the live link via this URL - [Yu-Gi-Oh-Guide](https://leebri101.github.io/Yu-Gi-Oh-Guide/index.html)-->
+You can visit the live link via this URL - [Geographically Challenged](https://leebri101.github.io/Yu-Gi-Oh-Guide/index.html)
 ***
 
  ## **Credits**
 ### **Honorable mentions**
 The second project was a very interesting but difficult challenge, which tested my understanding of HTML & CSS but to incorperate JavaScript too. However the more stuff that was being introduced to the project the more simpler and effective the project became due to time restraints of the course, but nonetheless it is a good way to show what i can do, but i must credit the following people:
  * [Can Sucullu](https://github.com/cansucullu) - My Code Institute mentor who is incredible at giving me insite and suggestions on further improving my project and is a huge help to continuously support me for any sort of technical issues within the project.
-* The Slack community of Code Institute for helping me the JavaScript module as it is somewhat challenging due to the deadline and questions on the module. 
+* The Slack community of Code Institute for helping me with JavaScript module as it is somewhat challenging due to the deadline and questions on the module.
+* Code Institute Tutors for assisting me with the technical aspects of the project i.e the intergation from Gitpod to codeanywhere and general assitance to coding problems. 
 * My older brother for always being available for being a personal guinea pig for my projects (and with many more to come) and giving me constant constructive feedback all the time.
 * Huge thanks to my girlfriend for the constant support and nagging me to stay focussed whenever i get distacted and also giving me useful advice and insight.
-
 
 ### **General reference:**
 * The project theme was inspired by the Code Institute's coding project called Love Maths. I have tried to change as much as possible but there may be some similarties within the codes.
@@ -230,14 +195,16 @@ The second project was a very interesting but difficult challenge, which tested 
 * All icons that were used throughout the project are sourced from [Font-Awesome](https://fontawesome.com/)
 * All fonts used have been imported from - [Google-Fonts](https://fonts.google.com/)
 
-  
 ### **Media:**
-* Background image on the home-page on index.html - [World-Globe](https://www.wallpaperflare.com/globe-world-map-earth-global-travel-planet-geography-wallpaper-akzmf/download)
-
-* Favicon for tab of page on index.html - [Favicon-Globe](https://www.flaticon.com/free-icon/earth-globe_616616)
-
-* General RGB color Table used in style.css - [RGB-Table](https://www.rapidtables.com/web/color/RGB_Color.html)
-
-* Image compressions- [TinyPNG](https://tinypng.com/) 
-
-* Colored grid scheme - [EightShapes](https://contrast-grid.eightshapes.com/)
+* Background image on the landing-page: [World-Globe](https://www.wallpaperflare.com/globe-world-map-earth-global-travel-planet-geography-wallpaper-akzmf/download)
+* Favicon for tab of page on index.html: [Favicon-Globe](https://www.flaticon.com/free-icon/earth-globe_616616)
+* General RGB color Table used in style.css: [RGB-Table](https://www.rapidtables.com/web/color/RGB_Color.html)
+* Image compressions: [TinyPNG](https://tinypng.com/) 
+* Colored grid scheme: [EightShapes](https://contrast-grid.eightshapes.com/)
+* Britannica-quizes for overall design idea and theme: [Britanica](https://www.britannica.com/quiz/name-that-world-flag themed world quiz)
+* Webcode Tools for general key frame animation use: [Webcode.Tools](https://webcode.tools/generators/css/keyframe-animation?utm_content=cmp-true )
+* HubSpot for different styling of animations on CSS:[HubSpot](https://blog.hubspot.com/website/css-hover-animation)
+* World Population Review as a general reference to check information for the quiz:[WorldPopulationReview](
+https://worldpopulationreview.com/country-rankings/smallest-countries)
+* RapidTables for general encyclopedia for searching for colour themes:[RapidTables](https://www.rapidtables.com/web/color/RGB_Color.html)
+* Mike Bostock's incredible method of shuffling: [Fisher-Yates](https://bost.ocks.org/mike/shuffle/)
