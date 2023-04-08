@@ -21,6 +21,7 @@ During development phase, I was manually testing the site in two ways:-
   1. Chrome
   2. Opera GX
   3. Edge
+  
 * I have also asked a small group of people to test the site using Apple & Android products using safari. The users reported back with no issues with overall content but with minor styling amendmants or styling suggestions which will be implimented in the near future with further testing.
 
 * Google Chrome: 
@@ -31,9 +32,9 @@ During development phase, I was manually testing the site in two ways:-
 
 * Microsoft Edge:
 ![Microsoft Edge](doc/sceenshots/microsoft-edge.png)
-### **Known Issues**
 
-* Below is the list of bugs that have been encountered in the porject and list of solutions used during the development & testing phase of the project.
+### **Known Issues**
+* Below is the list of bugs that have been encountered in the project and list of solutions used during the development & testing phase of the project.
 
 * Known Issues:
   * Results issue has a grey border around teh linear gradient border.
@@ -43,27 +44,39 @@ During development phase, I was manually testing the site in two ways:-
 
 #### **HTML** - https://validator.w3.org/nu/
 
-* All pages have been fully tested no issues were found via URL or file upload.
+* 0 major errors, 12 warnings have been found mostly due to the lack of headings for the HTML file.
+
+![HTML-Validator](doc/sceenshots/html-validator.png)
 
 #### **CSS** - https://jigsaw.w3.org/css-validator/
 
-* CSS page has been tested, no issues found via URL or file upload.\
-![CSS validator badge](https://jigsaw.w3.org/css-validator/images/vcss)
+* CSS page has been tested, no issues found via URL or file upload.
+
+![CSS Validator badge](https://jigsaw.w3.org/css-validator/images/vcss)
+
+
+![CSS Validator](doc/sceenshots/css-validator.png)
+
 
 ### **Lighthouse Scoring**
 
 ### **Testing Conditions:**
-* I have git sran the tests for mobile and desktop. 
-* I have asked a small group of people to run lighthouse tests from their own devices. 
+* I have ran tests for the quiz the on mobile and desktop and with different brand devices to see if there are any issues.
+* I have asked a small group of people to run lighthouse tests from their own devices. all have no issues via deskstop only mobile is slightly underperforming at 86% 
 
 #### **Desktop Version:**
-I have only included a screenshot for desktop as all pages were the same score, only changing by one or two points in performance if I ran it multiple times. 
+* No issues with desktop lighthouse score all performing above 90%.
+![Desktop Lighthouse Score](doc/sceenshots/desktop-lighthouse-score.png)
 
-![Desktop Lighthouse Score](doc/screenshots/desktop-lighthouse-score.webp) 
 
 **Maintaining the score:**
 
 #### **Mobile Version:**
+* The only main issue withthe mobile scoring is that origanlly it scored 81.
+* Due to it being a JPEG file or either a PNG file.
+* But converting the JPEG file to a PNG file did help increase the score from 81 to 86. 
+* But overall the quiz is fully fucntion with no issues except rendering and imagery. 
 
+![Mobile Lighthouse Score](doc/sceenshots/mobile-lighthouse-score.png)
 
 [Go back to README.md](README.md)
