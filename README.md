@@ -79,14 +79,14 @@ Changes include:-
 ### **Color Scheme:**
  * When creating the design of the quiz site I have went with this colour scheme to match the overall theme of georgraphy with the colors of the earth having blue and green elements.  
 
- ![Contrast Grid](doc/sceenshots/color-scheme.png)
+ ![Contrast Grid](doc/screenshots/color-scheme.png)
 
 ### **Reused Code:**
 * Some code has been re-used in from the first milestone project due to the simplicity and effectiveness it has on the overall layout of the final design.
     * Which one of any said weblinks have an original colours.
     * Upon hovering over it or clicking it will change colours. 
     * After visting the said weblink it will change to a secondary color. With the hover effect in place.
-![Reused Code](doc/sceenshots/reused-code.png)
+![Reused Code](doc/screenshots/reused-code.png)
 
 ## **Current Features on all pages**
 ###  **Header**
@@ -97,16 +97,16 @@ Changes include:-
 ### *Title:*
 * The Title is there to show the name of the page.
 
-![Title](doc/sceenshots/header.png)
+![Title](doc/screenshots/header.png)
 
 #### *Call To Action Button:*
 * The CTA is there with theme of the Earth to match the theme and catch the user's attention the moment that they enter the site. 
     
-![CTA Button](doc/sceenshots/cta-play-button.png)
+![CTA Button](doc/screenshots/cta-play-button.png)
     
 * Mobile version of CTA button with header and footer.
 
-![Mobile-version](doc/sceenshots/mobile-version.png)
+![Mobile-version](doc/screenshots/mobile-version.png)
 
 #### *Start Game Section:*
 * The start game section has an autofocus placeholder on the text box which allows for more accessibilty to the user, which is useful on mobile devices as the text cursor is already highlighted in the text box which saves time for the user to manually navigate to it as. 
@@ -114,7 +114,7 @@ Changes include:-
 * A error handler which diplays a red border in the text box if the user hasn't provided any sort of text or name.
 * An event listener where the user can press the ENTER key which has the same response as clicking the Start game button. 
 
-  ![Start Game Section](doc/sceenshots/placeholder-input.png)
+  ![Start Game Section](doc/screenshots/placeholder-input.png)
 
 ### **Quiz-Section**:
 #### *Quiz-tracker:*
@@ -122,7 +122,7 @@ Features used:
 * A indicator display to track the current question number the user is on out of the total quiz questions.
 * A countdown timer with a animation which moves each time a second is lost within the alloted time length.
 * A countdown bar to also track time but visually display the length of time left in the bar.
-![Quiz-section](doc/sceenshots/tracker-update.png)
+![Quiz-section](doc/screenshots/tracker-update.png)
 
 ### **Questions and Answers**:
 #### *Q and A:*
@@ -132,7 +132,7 @@ Features used:
 * Each answer having a hover animation with a color changing function,  the color also changes when the user clicks on answer. 
 * The Fisher-Yates method used to shuffle all the questions and answers to any given random order out of ten. So no same question is used twice.
 
-![Quiz-Questions](doc/sceenshots/quiz-questions.png)
+![Quiz-Questions](doc/screenshots/quiz-questions.png)
 
 ## **Point-Tracker**
 * The point tracker is used to display to the user whether they have; answered the question correctly, gave an incorrect answer, did not give answer and to show which answer they are currently on.
@@ -141,20 +141,20 @@ Features used:
     * Red: Meaning the user has answered incorrectly.
     * Gray: Meaning the user has ran out of time or can alternatively skip the question.
     * Yellow: To indicate to the user that they are on the current question.
-![Point-Tracker](doc/sceenshots/progress-tracker.png)
+![Point-Tracker](doc/screenshots/progress-tracker.png)
 
 ## **Results-Section**
 * The results sections shows the following things:
     * The users score out of 10.
     * A feedback message to the user as to whatever associated score they have recieved.
     * A Play Again button if the users wishes to replay the quiz again.
-![Resuts-Section](doc/sceenshots/results-page.png)
+![Resuts-Section](doc/screenshots/results-page.png)
 
 ## **Footer**
 * All icons that were used in the footer is sourced from font awesome.
 * A personal copyright has been added in-case of plagerism.
 * A personal link to my GitHub page which users can track my coding journey.
-![Footer-Page](doc/sceenshots/footer.png)
+![Footer-Page](doc/screenshots/footer.png)
 
 ## **Typesetting**
  Throughout the second project milestone only this font was used:
