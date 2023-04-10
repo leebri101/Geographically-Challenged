@@ -174,7 +174,6 @@ Features used:
 
 ***
 ## **Testing-Phase**
-
 Full details of the testing phase can be found here: [TESTING.md](TESTING.md)
 ***
 ## **Deployment**
