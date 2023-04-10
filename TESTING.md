@@ -1,7 +1,7 @@
 # Testing Page of Contents
 * [**Development Testing Phase**](#development-testing-phase)
     * [**Manual Testing Phase**](#manual-testing-phase)
-    * [**Known Issues**](#known-issues)
+    * [**Known Issues and Solutions**](#known-issues-and-solutions)
 * [**Post Development Testing-Phase**](#post-development-testing-phase)
   * [**Validator Testing**](#validator-testing)
     * [**HTML**](#html---httpsvalidatorw3orgnu)
@@ -33,12 +33,13 @@ During development phase, I was manually testing the site in two ways:-
 * Microsoft Edge:
 ![Microsoft Edge](doc/sceenshots/microsoft-edge.png)
 
-### **Known Issues**
+### **Known Issues and Solutions**
 * Below is the list of bugs that have been encountered in the project and list of solutions used during the development & testing phase of the project.
 
-* Known Issues:
+* Known Issues and Solutions:
   * Results issue has a grey border around teh linear gradient border.
-  * users can score more than 10 if they get all thw answers correct
+  * Users can score more than 10 if they get all the answers correct.
+    
 ## **Post Development Testing Phase**
 ### **Validator Testing**
 
