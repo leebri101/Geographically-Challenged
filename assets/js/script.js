@@ -331,11 +331,11 @@ function userResults(){
   let player = playerName.value;
   if (correctNum <= 2){
     playerFeedback.innerHTML = `You are not from around here are you ${player}?`;
-  } else if (correctNum <= 6){
+  } else if (correctNum <= 5){
     playerFeedback.innerHTML = `Beleaf in your self ${player}`;
-  } else if (correctNum <= 8){
+  } else if (correctNum <= 7){
     playerFeedback.innerHTML= `${player} Haters gonna hate, Equators gonna equate.`;
-  } else if (correctNum < 10){
+  } else if (correctNum < 9){
     playerFeedback.innerHTML = `Hey ${player} you got some good Chemistree there.`;
   } else if (correctNum >= 10){
     playerFeedback.innerHTML = `Man ${player}, you are definitely out of this world!`;
