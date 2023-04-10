@@ -38,7 +38,7 @@ During development phase, I was manually testing the site in two ways:-
 
 * Known Issues:
   * Results issue has a grey border around teh linear gradient border.
-
+  * users can score more than 10 if they get all thw answers correct
 ## **Post Development Testing Phase**
 ### **Validator Testing**
 
