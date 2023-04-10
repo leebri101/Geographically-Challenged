@@ -38,8 +38,7 @@ During development phase, I was manually testing the site in two ways:-
 * Below is the list of bugs that have been encountered in the project and list of solutions used during the development & testing phase of the project.
 
 * Known Issues:
-  * Results issue has a grey border around the linear gradient border (issue can only be seen via preview of live weblink).
-    
+  * Grey bordering issue in results page (issue can only be seen via preview of live weblink).
     ![Error of Results Page](doc/screenshots/error-on-results-page.png)
 
 
@@ -50,6 +49,10 @@ During development phase, I was manually testing the site in two ways:-
   * Changed some of the values so it doesn't clash with the variables.
 
     ![Solution to Player Feedback](doc/screenshots/player-feedback-solution.png)
+
+* Bugs: 
+  * Gray Bordering issue of resullts page:
+    * Due to the time-frame of the project and the submission deadline being a day before the submission date, the issue of the grey border appearing in the linear gradient on the results page of the quiz is left in place as it does not fully do any harm in any of the major coding components nor does it crash the whole site or affect the code in the background as it is a minor appearnce issue.
     
 ## **Post Development Testing Phase**
 ### **Validator Testing**
@@ -72,9 +75,11 @@ During development phase, I was manually testing the site in two ways:-
 #### **JavaScript** - https://jshint.com/
 
 * JSHINT pages has been tested no issues have been found.
+
   
 Script JavaScript JSHINT: 
 ![JSHINT Script](doc/screenshots/script-jshint.png)
+
 
 Quiz Questions JSHINT:
 ![JSHINT Questions](doc/screenshots/quiz-questions-jshint.png)
