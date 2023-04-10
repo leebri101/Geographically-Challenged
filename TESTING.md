@@ -25,20 +25,30 @@ During development phase, I was manually testing the site in two ways:-
 * I have also asked a small group of people to test the site using Apple & Android products using safari. The users reported back with no issues with overall content but with minor styling amendmants or styling suggestions which will be implimented in the near future with further testing.
 
 * Google Chrome: 
-![Google Chrome](doc/sceenshots/google-chrome.png)
+![Google Chrome](doc/screenshots/google-chrome.png)
 
 * Opera GX:
-![Opera GX](doc/sceenshots/opera-gx.png)
+![Opera GX](doc/screenshots/opera-gx.png)
 
 * Microsoft Edge:
-![Microsoft Edge](doc/sceenshots/microsoft-edge.png)
+![Microsoft Edge](doc/screenshots/microsoft-edge.png)
 
 ### **Known Issues and Solutions**
 * Below is the list of bugs that have been encountered in the project and list of solutions used during the development & testing phase of the project.
 
 * Known Issues and Solutions:
-  * Results issue has a grey border around teh linear gradient border.
+  * Results issue has a grey border around the linear gradient border (issue can only be seen via preview of live weblink).
+    
+    ![Error of Results Page](doc/screenshots/error-on-results-page.png)
+
+
   * Users can score more than 10 if they get all the answers correct.
+    ![Error on Player Feedback](doc/screenshots/error-player-feedback.png)
+
+* Solutions: 
+  * Changed some of the values so it doesn't clash with the variables.
+
+    ![Solution to Player Feedback](doc/screenshots/player-feedback-solution.png)
     
 ## **Post Development Testing Phase**
 ### **Validator Testing**
@@ -47,7 +57,7 @@ During development phase, I was manually testing the site in two ways:-
 
 * 0 major errors, 12 warnings have been found mostly due to the lack of headings for the HTML file.
 
-![HTML-Validator](doc/sceenshots/html-validator.png)
+![HTML-Validator](doc/screenshots/html-validator.png)
 
 #### **CSS** - https://jigsaw.w3.org/css-validator/
 
@@ -56,7 +66,7 @@ During development phase, I was manually testing the site in two ways:-
 ![CSS Validator badge](https://jigsaw.w3.org/css-validator/images/vcss)
 
 
-![CSS Validator](doc/sceenshots/css-validator.png)
+![CSS Validator](doc/screenshots/css-validator.png)
 
 
 ### **Lighthouse Scoring**
@@ -67,7 +77,7 @@ During development phase, I was manually testing the site in two ways:-
 
 #### **Desktop Version:**
 * No issues with desktop lighthouse score all performing above 90%.
-![Desktop Lighthouse Score](doc/sceenshots/desktop-lighthouse-score.png)
+![Desktop Lighthouse Score](doc/screenshots/desktop-lighthouse-score.png)
 
 
 **Maintaining the score:**
@@ -78,6 +88,6 @@ During development phase, I was manually testing the site in two ways:-
 * But converting the JPEG file to a PNG file did help increase the score from 81 to 86. 
 * But overall the quiz is fully fucntion with no issues except rendering and imagery. 
 
-![Mobile Lighthouse Score](doc/sceenshots/mobile-lighthouse-score.png)
+![Mobile Lighthouse Score](doc/screenshots/mobile-lighthouse-score.png)
 
 [Go back to README.md](README.md)
