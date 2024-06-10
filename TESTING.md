@@ -6,6 +6,7 @@
   * [**Validator Testing**](#validator-testing)
     * [**HTML**](#html---httpsvalidatorw3orgnu)
     * [**CSS**](#css---httpsjigsaww3orgcss-validator)
+    * [**JavaScript](#javascript---https://jshint.com/)
   * [**Lighthouse Scoring**](#lighthouse-scoring)
 
 ## **Development Testing Phase**
